@@ -13,7 +13,7 @@ const DEPT_GROUPS = [
   { group: 'หน่วยที่ 5',        items: ['OPD 22', 'OPD 23', 'OPD 26'] },
   { group: 'หน่วยที่ 6',        items: ['OPD 101', 'รังสีรักษา'] },
   { group: 'หน่วยที่ 7',        items: ['EID complex'] },
-  { group: 'หน่วยที่ 8',        items: ['OPD 27', 'OPD 28', 'OPD 29', 'OPD เด็กนอกเวลา'] },
+  { group: 'หน่วยที่ 8',        items: ['OPD 27', 'OPD 28', 'OPD 29'] },
   { group: 'หน่วยผ่าตัดเล็ก',  items: ['OR Minor ชั้น 3', 'OR Minor ชั้น 10', 'OPD 2'] },
   { group: 'ฉุกเฉิน',           items: ['ER', 'OPD นอกเวลา'] },
   { group: 'สังเกตอาการ',       items: ['หอผู้ป่วยสังเกตอาการ'] },
