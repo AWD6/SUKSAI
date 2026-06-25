@@ -1,0 +1,289 @@
+/* ═══════════════════════════════════════════════════
+   SUKSAI — Mobile Enhanced & Animations
+   Optimized for high-end mobile experience
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Variables & Keyframes ─── */
+:root {
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --anim-speed: 0.6s;
+  --anim-curve: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ─── Global Mobile Enhancements ─── */
+@media (max-width: 768px) {
+  .container-lg, .container, .container-sm {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Fix Font Overlap in Dashboard & KPI */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .kpi-card {
+    padding: 12px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px;
+  }
+
+  .kpi-label {
+    font-size: 11px !important;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .kpi-value {
+    font-size: 24px !important;
+    margin: 4px 0 !important;
+  }
+
+  .kpi-sub {
+    font-size: 10px !important;
+    opacity: 0.8;
+  }
+
+  /* Charts Grid Optimization */
+  .charts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .charts-triple-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Fix Chart Card Heights for Mobile */
+  #page-dashboard .card-body {
+    padding: 12px !important;
+  }
+
+  /* Header & Logo Mobile */
+  .logo-name {
+    font-size: 18px !important;
+  }
+  
+  .logo-sub {
+    font-size: 9px !important;
+  }
+
+  /* Section Headers */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  .section-header > div:last-child {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+
+  #filter-month-year {
+    flex: 1;
+    width: auto !important;
+  }
+
+  #btn-refresh-dashboard {
+    flex: 0 0 auto;
+  }
+}
+
+/* ─── Dimensional & Glassmorphism ─── */
+.card, .kpi-card, .evidence-card, .fwh-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+  transition: transform 0.3s var(--anim-curve), box-shadow 0.3s var(--anim-curve);
+}
+
+.card:hover, .kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.12);
+}
+
+/* ─── Advanced Animations ─── */
+.page.active .kpi-card {
+  animation: fadeInUp var(--anim-speed) var(--anim-curve) both;
+}
+
+.page.active .kpi-card:nth-child(1) { animation-delay: 0.1s; }
+.page.active .kpi-card:nth-child(2) { animation-delay: 0.2s; }
+.page.active .kpi-card:nth-child(3) { animation-delay: 0.3s; }
+.page.active .kpi-card:nth-child(4) { animation-delay: 0.4s; }
+
+.page.active .charts-grid .card, 
+.page.active .charts-triple-grid .card {
+  animation: scaleIn var(--anim-speed) var(--anim-curve) both;
+}
+
+/* Staggered animation for charts */
+.page.active .charts-grid .card:nth-child(1) { animation-delay: 0.5s; }
+.page.active .charts-grid .card:nth-child(2) { animation-delay: 0.6s; }
+
+/* ─── Button Enhancements ─── */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% { transform: scale(0, 0); opacity: 0.5; }
+  100% { transform: scale(40, 40); opacity: 0; }
+}
+
+/* ─── Mobile Specific Touch UI ─── */
+@media (pointer: coarse) {
+  .btn, .nav-link, .cs-trigger, .btn-toggle {
+    min-height: 44px; /* Apple's recommended touch target */
+  }
+  
+  .bottom-nav .nav-link {
+    padding-top: 10px;
+    padding-bottom: env(safe-area-inset-bottom, 10px);
+  }
+}
+
+/* ─── Chart Container Classes ─── */
+.chart-body-280 { height: 280px; padding: 20px; }
+.chart-body-320 { height: 320px; padding: 20px; }
+.chart-body-260 { height: 260px; padding: 16px; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+
+@media (max-width: 768px) {
+  .chart-body-280 { height: 240px; padding: 12px; }
+  .chart-body-320 { height: 280px; padding: 12px; }
+  .chart-body-260 { height: 220px; padding: 10px; }
+  
+  /* Reduce Chart Header Font Size */
+  .card-title { font-size: 13px !important; }
+  .card-subtitle { font-size: 10px !important; }
+}
+
+/* ─── Smooth Transitions for Charts ─── */
+canvas {
+  transition: opacity 0.4s ease;
+}
+
+.loading-state {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+/* ─── Hero Enhancements ─── */
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  perspective: 1000px;
+}
+
+.title-main {
+  font-size: clamp(24px, 6vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.title-sub {
+  font-size: clamp(18px, 4.5vw, 32px);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.accent-mint {
+  font-size: clamp(16px, 4vw, 28px);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  margin-top: 8px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-inner {
+  animation: scaleIn 0.8s var(--anim-curve);
+}
+
+.hero-badge {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ─── Assessment Page Enhancements ─── */
+.step-panel.active {
+  animation: fadeInUp 0.5s var(--anim-curve);
+}
+
+.progress-bar {
+  box-shadow: 0 0 10px rgba(61,173,138,0.3);
+}
+
+/* ─── Better Mobile Navigation ─── */
+.bottom-nav {
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+}
+
+.bottom-nav .nav-link.active svg {
+  filter: drop-shadow(0 0 5px rgba(139,94,60,0.4));
+}
+
+/* ─── Loading Spinner ─── */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--primary-light);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
