@@ -1,0 +1,48 @@
+name: Deploy SUKSAI
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare static files
+        run: |
+          mkdir -p _site
+          if [ -f "index.html" ]; then
+            cp index.html _site/
+          elif [ -f "suksai/index.html" ]; then
+            cp suksai/index.html _site/
+          fi
+          sed -i 's|href="/|href="./|g' _site/index.html
+          sed -i 's|src="/|src="./|g'  _site/index.html
+          if [ -d "public" ]; then
+            cp -r public/. _site/
+          elif [ -d "suksai/public" ]; then
+            cp -r suksai/public/. _site/
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
