@@ -34,11 +34,14 @@ jobs:
           fi
           sed -i 's|href="/|href="./|g' _site/index.html
           sed -i 's|src="/|src="./|g'  _site/index.html
-          if [ -d "public" ]; then
-            cp -r public/. _site/
-          elif [ -d "suksai/public" ]; then
-            cp -r suksai/public/. _site/
-          fi
+          [ -d "public" ]        && cp -r public/. _site/
+          [ -d "suksai/public" ] && cp -r suksai/public/. _site/
+          find . -maxdepth 1 -name "*.css" -exec cp {} _site/ \;
+          find . -maxdepth 1 -name "*.js"  -exec cp {} _site/ \;
+          find . -maxdepth 1 -name "*.jpg" -exec cp {} _site/ \;
+          find . -maxdepth 1 -name "*.png" -exec cp {} _site/ \;
+          find . -maxdepth 1 -name "*.svg" -exec cp {} _site/ \;
+          ls -lh _site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
