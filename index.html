@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#3DAD8A" />
+<meta name="description" content="SUKSAI — Skin Rash Assessment · ระบบคัดกรองผื่นผิวหนัง 13 โรค" />
+<title>SUKSAI — Skin Rash Assessment</title>
+<link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="./mobile-enhanced.css" />
+<link rel="stylesheet" href="./dashboard-polish.css" />
+<link rel="stylesheet" href="./fixes.css" />
+<link rel="stylesheet" href="./mannequin.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- ════════════════ HEADER ════════════════ -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo nav-link" data-page="home">
+        <div class="logo-icon">
+          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="38" rx="10" fill="#3DAD8A"/>
+            <circle cx="14" cy="15" r="3.5" fill="#8B5E3C" opacity="0.92"/>
+            <circle cx="22" cy="13" r="2.4" fill="#8B5E3C" opacity="0.75"/>
+            <circle cx="24" cy="21" r="3.8" fill="#8B5E3C" opacity="0.88"/>
+            <circle cx="14.5" cy="23" r="2.7" fill="#8B5E3C" opacity="0.78"/>
+            <circle cx="19.5" cy="18" r="1.8" fill="#8B5E3C" opacity="0.62"/>
+            <circle cx="14" cy="15" r="1.6" fill="white" opacity="0.28"/>
+            <circle cx="24" cy="21" r="1.7" fill="white" opacity="0.22"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">SUKS<span class="logo-ai">A</span><span class="logo-ai">I</span></span>
+          <span class="logo-sub">Skin Rash Assessment System</span>
+        </div>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#" class="nav-link active" data-page="home">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </a>
+        <a href="#" class="nav-link" data-page="assess">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Assess
+        </a>
+        <a href="#" class="nav-link" data-page="education">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Education
+        </a>
+        <a href="#" class="nav-link" data-page="differential">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Differential Dx
+        </a>
+        <a href="#" class="nav-link" data-page="dashboard">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-link" data-page="criteria">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Criteria
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ════════════════ MAIN ════════════════ -->
+  <main class="main-content">
+
+    <!-- ░░░░ HOME ░░░░ -->
+    <div id="page-home" class="page active">
+
+      <div class="hero">
+        <div class="hero-inner">
+              <div class="hero-badge">
+            <div class="hero-badge-banner">OPD - ER</div>
+            <span>conceived, designed, and Brought to Life by RN.Patipon Wiyo</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="title-main">Symptom and sKin lesion</span>
+            <span class="title-sub">Understanding System</span>
+            <span class="accent-mint">with Artificial Intelligence</span>
+          </h1>
+          <div class="hero-title-th">
+            <span class="hero-title-th-inner">ระบบประเมินอาการและลักษณะผื่นด้วยปัญญาประดิษฐ์</span>
+          </div>
+          <div class="hero-title-sub">ครอบคลุม 13 โรคผื่นผิวหนัง — Skin Rash Assessment (13 Diseases)</div>
+          <p class="hero-desc">
+            <strong>Clinical Decision Support System</strong><br>
+            <span class="hero-desc-light">สำหรับบุคลากรทุกระดับ · For all healthcare personnel</span><br>
+            <span class="hero-desc-en">AI-powered differential diagnosis for 13 skin rash conditions.</span>
+          </p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary btn-lg nav-link btn-start" data-page="assess">
+              <span class="btn-start-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M6 18h8"/><path d="M3 22h18"/>
+                  <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                  <path d="M9 14h.01"/><path d="M9 2h5.5"/>
+                  <path d="M14.5 2v4.5"/><path d="M9 2v4.5"/>
+                  <rect x="6" y="6" width="8" height="5" rx="1"/>
+                </svg>
+              </span>
+              Start Clinical Assessment
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <p class="hero-note">ใช้เวลาไม่เกิน 1 นาที/เคส · Under 1 minute per case</p>
+        </div>
+      </div>
+
+      <!-- Evidence section -->
+      <div class="section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2>Evidence Base · หลักฐานเชิงประจักษ์</h2>
+            <p>Evidence-Based AI Skin Lesion Analysis — ข้อมูลที่ใช้พัฒนาระบบ</p>
+          </div>
+          <div class="evidence-grid">
+            <div class="evidence-card">
+              <div class="evidence-icon green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="evidence-title">AI Performance</div>
+              <div class="evidence-sub">Validated metrics · ค่าที่ผ่านการตรวจสอบ</div>
+              <div class="evidence-row"><span>Accuracy (ความแม่นยำ)</span><span class="evidence-row-val">80–90%</span></div>
+              <div class="evidence-row"><span>Sensitivity (ความละเอียดอ่อน)</span><span class="evidence-row-val">83–91%</span></div>
+              <div class="evidence-row"><span>Specificity (ความจำเพาะ)</span><span class="evidence-row-val">89–97%</span></div>
+            </div>
+            <div class="evidence-card">
+              <div class="evidence-icon brown">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </div>
+              <div class="evidence-title">Training Dataset</div>
+              <div class="evidence-sub">Mpox Skin Lesion Dataset v2.0 · 678 cases</div>
+              <div class="evidence-row"><span>Chickenpox (อีสุกอีใส)</span><span class="evidence-row-val">275 img</span></div>
+              <div class="evidence-row"><span>Mpox</span><span class="evidence-row-val">284 img</span></div>
+              <div class="evidence-row"><span>HFMD / Measles</span><span class="evidence-row-val">261 / 155 img</span></div>
+              <div class="evidence-row"><span>Cowpox / Healthy</span><span class="evidence-row-val">166 / 214 img</span></div>
+              <div class="evidence-row highlight"><span style="font-weight:700">Total</span><span class="evidence-row-val">1355 images</span></div>
+            </div>
+            <div class="evidence-card">
+              <div class="evidence-icon green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="evidence-title">How It Works · 4 Steps</div>
+              <div class="evidence-sub">ไม่เกิน 1 นาที/เคส · Under 1 min per case</div>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+                <div style="display:flex;gap:10px;align-items:flex-start"><div class="step-num">1</div><div><div style="font-size:13px;font-weight:700">Select Department</div><div style="font-size:11px;color:var(--text-muted)">เลือกห้องตรวจที่ใช้งาน</div></div></div>
+                <div style="display:flex;gap:10px;align-items:flex-start"><div class="step-num">2</div><div><div style="font-size:13px;font-weight:700">Clinical Criteria + Body Map</div><div style="font-size:11px;color:var(--text-muted)">ประเมิน Major/Minor + เลือกตำแหน่งผื่น</div></div></div>
+                <div style="display:flex;gap:10px;align-items:flex-start"><div class="step-num">3</div><div><div style="font-size:13px;font-weight:700">AI Image Analysis</div><div style="font-size:11px;color:var(--text-muted)">ถ่ายรูปวิเคราะห์ด้วย AI</div></div></div>
+                <div style="display:flex;gap:10px;align-items:flex-start"><div class="step-num">4</div><div><div style="font-size:13px;font-weight:700">Results &amp; Guidance</div><div style="font-size:11px;color:var(--text-muted)">ดูผลประเมินและคำแนะนำ</div></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5W1H -->
+          <div style="margin-top:36px">
+            <div class="section-header text-center">
+              <h2>Varicella (Chickenpox) · 5W1H</h2>
+              <p>โรคอีสุกอีใส — ข้อมูลตามหลักฐานเชิงประจักษ์ปัจจุบัน (CDC 2024)</p>
+            </div>
+            <div class="fwh-grid">
+              <div class="fwh-card"><div class="fwh-q">WHAT</div><div class="fwh-title">คืออะไร?</div><div class="fwh-desc">โรคติดเชื้อไวรัส Varicella-Zoster (VZV) ลักษณะเด่น: ผื่นหลายระยะพร้อมกัน (จุดแดง ตุ่มนูน ตุ่มน้ำ สะเก็ด) — Pathognomonic sign</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHO</div><div class="fwh-title">ใครเสี่ยง?</div><div class="fwh-desc">ทุกคนที่ไม่มีภูมิคุ้มกัน พบบ่อยในเด็ก 1–9 ปี กลุ่มเสี่ยงสูง: ผู้ใหญ่ หญิงตั้งครรภ์ ทารก ผู้มีภูมิคุ้มกันต่ำ</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHEN</div><div class="fwh-title">Incubation Period</div><div class="fwh-desc">10–21 วัน เฉลี่ย 14–16 วัน แพร่เชื้อ 1–2 วันก่อนผื่นขึ้น จนกว่าตุ่มตกสะเก็ดหมด</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHERE</div><div class="fwh-title">การกระจายผื่น</div><div class="fwh-desc">เริ่มที่ลำตัว/ใบหน้า กระจาย Centrifugal สู่แขนขา พบในชุมชน โรงเรียน ศูนย์เด็กเล็ก</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHY</div><div class="fwh-title">ทำไมต้องคัดกรอง?</div><div class="fwh-desc">Breakthrough varicella อาการไม่ชัด ต้องแยกจาก Mpox, HFMD บุคลากรใหม่อาจไม่เคยเห็นผื่น</div></div>
+              <div class="fwh-card"><div class="fwh-q">HOW</div><div class="fwh-title">Transmission</div><div class="fwh-desc">Airborne — ละอองฝอย ไอ จาม และสัมผัสตุ่มน้ำโดยตรง ต้องใช้ Airborne Precautions</div></div>
+            </div>
+          </div>
+
+          <!-- PDPA -->
+          <div class="info-box mt-24" style="display:flex;gap:12px;align-items:flex-start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" stroke-width="2" style="flex-shrink:0;margin-top:1px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <p><strong>PDPA Compliant</strong> — ระบบไม่เก็บ HN / ID / ชื่อ-สกุลผู้ป่วย บันทึกเฉพาะสถิติการใช้ เพื่อเก็บบันทึกสถิติภายในงานการพยาบาลผู้ป่วยนอกและผู้ป่วยฉุกเฉิน</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- /home -->
+
+    <!-- ░░░░ ASSESS ░░░░ -->
+    <div id="page-assess" class="page">
+      <div class="assess-header">
+        <h1>Clinical Assessment · ผื่นผิวหนัง</h1>
+        <p>Skin Rash Screening — Step-by-step evaluation (13 diseases)</p>
+      </div>
+      <div class="container-sm">
+        <!-- Progress -->
+        <div style="margin-bottom:20px">
+          <div class="progress"><div class="progress-bar" id="assess-progress" style="width:25%"></div></div>
+          <div class="step-labels">
+            <span class="step-label active" id="step-1-lbl">Department (ห้องตรวจ)</span>
+            <span class="step-label" id="step-2-lbl">Symptoms (อาการ)</span>
+            <span class="step-label" id="step-3-lbl">AI Scan (วิเคราะห์ด้วย AI)</span>
+            <span class="step-label" id="step-4-lbl">Results (ผลลัพธ์การประเมิน)</span>
+          </div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step-panel active" id="step-panel-1">
+          <div class="card card-overflow-visible">
+            <div class="card-header primary-bg">
+              <div class="card-title">Step 1 · Patient Information</div>
+              <div class="card-subtitle">เลือกข้อมูลผู้ป่วยและห้องตรวจ</div>
+            </div>
+            <div class="card-body" style="overflow:visible;position:relative;z-index:0">
+              <label class="form-label">Department / ห้องตรวจ</label>
+              <div id="dept-dropdown-wrap"></div>
+              <label class="form-label" style="margin-top:20px">Age Range / ช่วงอายุ</label>
+              <div class="button-group" id="age-group-wrap">
+                <button class="btn-toggle" data-value="0-1">0-1 ปี</button>
+                <button class="btn-toggle" data-value="2-5">2-5 ปี</button>
+                <button class="btn-toggle" data-value="6-12">6-12 ปี</button>
+                <button class="btn-toggle" data-value="13-18">13-18 ปี</button>
+                <button class="btn-toggle" data-value="19+">19+ ปี</button>
+              </div>
+              <label class="form-label" style="margin-top:20px">Gender / เพศ</label>
+              <div class="button-group" id="gender-group-wrap">
+                <button class="btn-toggle" data-value="M">ชาย / Male</button>
+                <button class="btn-toggle" data-value="F">หญิง / Female</button>
+              </div>
+              <label class="form-label" style="margin-top:20px">Vaccination Status / ประวัติวัคซีน</label>
+              <div class="button-group" id="vaccine-group-wrap">
+                <button class="btn-toggle" data-value="none">ไม่เคย / None</button>
+                <button class="btn-toggle" data-value="1dose">1 เข็ม / 1 Dose</button>
+                <button class="btn-toggle" data-value="2dose">2 เข็ม / 2 Doses</button>
+                <button class="btn-toggle" data-value="unknown">ไม่ทราบ / Unknown</button>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-full" id="btn-step1-next">
+                Next: Symptom Assessment
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-panel" id="step-panel-2">
+          <div class="card mb-16">
+            <div class="card-header primary-bg">
+              <div class="card-title">Major Criteria <span style="font-size:12px;font-weight:400;color:var(--primary)">· 2 คะแนนต่อข้อ</span></div>
+              <div class="card-subtitle">เลือกอาการที่พบในผู้ป่วยรายนี้</div>
+            </div>
+            <div class="card-body"><div id="major-criteria"></div></div>
+          </div>
+          <div class="card mb-16">
+            <div class="card-header secondary-bg">
+              <div class="card-title">Minor Criteria <span style="font-size:12px;font-weight:400;color:var(--brown)">· 1 คะแนนต่อข้อ</span></div>
+            </div>
+            <div class="card-body"><div id="minor-criteria"></div></div>
+          </div>
+          <div class="card mb-16">
+            <div class="card-header danger-bg">
+              <div class="card-title text-danger" style="display:flex;align-items:center;gap:6px">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Red Flags · ภาวะเสี่ยงอันตราย
+              </div>
+              <div class="card-subtitle" style="color:var(--destructive)">หากมีข้อใดข้อหนึ่ง ต้องรีบแจ้งแพทย์ทันที · Notify physician immediately</div>
+            </div>
+            <div class="card-body"><div id="red-flags"></div></div>
+          </div>
+
+          <!-- ═══ BODY MAP CARD ═══ -->
+          <div class="card mb-16" id="body-map-card">
+            <div class="card-header" style="background:linear-gradient(135deg,#e8f7f3,#f0f4ff);">
+              <div class="card-title" style="display:flex;align-items:center;gap:8px">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                  <circle cx="12" cy="5" r="2"/>
+                  <path d="M12 7v7"/>
+                  <path d="M9 10h6"/>
+                  <path d="M9 14l-1.5 6"/>
+                  <path d="M15 14l1.5 6"/>
+                </svg>
+                Body Map · ตำแหน่งผื่น
+              </div>
+              <div class="card-subtitle">แตะบริเวณที่มีผื่นบนหุ่นจำลอง (เลือกได้หลายจุด) · Tap regions where rash appears</div>
+            </div>
+            <div class="card-body">
+              <div class="mannequin-view-toggle">
+                <button class="btn btn-sm btn-primary" id="btn-view-front">ด้านหน้า / Front</button>
+                <button class="btn btn-sm btn-outline" id="btn-view-back">ด้านหลัง / Back</button>
+              </div>
+              <div id="mannequin-wrap"></div>
+              <div id="body-parts-tags" class="body-parts-tags"></div>
+              <div class="body-hint" id="body-hint-text">แตะบริเวณที่มีผื่น · Tap to select</div>
+              <button class="btn btn-sm btn-ghost btn-full" id="btn-clear-mannequin" style="margin-top:8px;color:var(--text-muted);font-size:12px">
+                ล้างการเลือกทั้งหมด · Clear selection
+              </button>
+            </div>
+          </div>
+
+          <div class="score-pill mb-16" id="score-display">
+            <span>คะแนนปัจจุบัน (Current Score)</span><span class="score-val">0 คะแนน — สงสัยระดับน้อย (Low Suspicion)</span>
+          </div>
+          <div style="display:flex;gap:12px">
+            <button class="btn btn-outline" style="width:35%" id="btn-step2-back">← Back</button>
+            <button class="btn btn-primary" style="flex:1" id="btn-step2-next">
+              Next: AI Scan
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-panel" id="step-panel-3">
+          <div class="card">
+            <div class="card-header primary-bg" style="text-align:center;padding:24px 20px 18px">
+              <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--brown-light),var(--primary-light));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:var(--shadow-brown)">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brown)" stroke-width="2">
+                  <path d="M6 18h8"/><path d="M3 22h18"/>
+                  <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                  <rect x="6" y="6" width="8" height="5" rx="1"/>
+                </svg>
+              </div>
+              <div class="card-title" style="font-size:18px">การวิเคราะห์ภาพด้วย AI (AI Image Analysis)</div>
+              <div class="card-subtitle" style="font-size:13px">ถ่ายภาพผื่นที่ชัดเจนในแสงที่เพียงพอ · Capture a clear image in good lighting</div>
+            </div>
+            <div class="card-body" style="text-align:center">
+              <div class="camera-area" id="camera-area">
+                <video id="camera-video" autoplay playsinline muted></video>
+                <img id="captured-photo" alt="Captured lesion" />
+                <div class="camera-corners" id="camera-corners">
+                  <div class="corner corner-tl"></div>
+                  <div class="corner corner-tr"></div>
+                  <div class="corner corner-bl"></div>
+                  <div class="corner corner-br"></div>
+                </div>
+                <div class="camera-scan-line" id="camera-scan"></div>
+                <div class="camera-placeholder" id="camera-placeholder">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <span style="font-size:13px;font-weight:600">Camera Viewfinder</span>
+                  <span style="font-size:11px;color:var(--text-light)">กดปุ่มด้านล่างเพื่อเปิดกล้อง</span>
+                </div>
+              </div>
+              <div class="camera-controls">
+                <button class="btn btn-outline" id="btn-open-camera" style="gap:6px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  Open Camera
+                </button>
+                <button class="btn btn-brown" id="btn-capture" style="display:none;gap:6px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M5 12a7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7 7 7 0 0 1-7-7z"/><circle cx="12" cy="12" r="1" fill="white"/></svg>
+                  Capture Photo
+                </button>
+                <button class="btn btn-outline" id="btn-retake" style="display:none;gap:6px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                  Retake
+                </button>
+              </div>
+              <!-- File upload option -->
+              <div style="margin-top:10px">
+                <label style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);cursor:pointer;padding:6px 12px;border:1px dashed var(--border);border-radius:8px">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  อัปโหลดรูปภาพ / Upload image
+                  <input type="file" accept="image/*" id="file-upload-input" style="display:none" />
+                </label>
+              </div>
+              <div class="analyzing-wrap" id="analyzing-state">
+                <div class="analyzing-spinner">
+                  <div class="spinner-ring"></div>
+                  <div class="spinner-inner">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M6 18h8"/><path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                      <rect x="6" y="6" width="8" height="5" rx="1"/>
+                    </svg>
+                  </div>
+                </div>
+                <div style="font-size:16px;font-weight:700;margin-bottom:4px">Analyzing lesion pattern...</div>
+                <div style="font-size:13px;color:var(--text-muted)">Comparing against Mpox Skin Lesion Dataset v2.0</div>
+              </div>
+              <button class="btn btn-primary btn-lg" style="max-width:360px;width:100%;border-radius:var(--radius-full);margin-top:4px" id="btn-analyze">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 18h8"/><path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                  <rect x="6" y="6" width="8" height="5" rx="1"/>
+                </svg>
+                Run AI Analysis
+              </button>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:10px;max-width:320px;margin-left:auto;margin-right:auto">
+                ระบบเป็นเพียงการประเมินคัดกรอง ไม่สามารถทดแทนการวินิจฉัยโดยแพทย์ได้
+              </div>
+              <div style="margin-top:14px">
+                <button class="btn btn-ghost btn-sm" id="btn-step3-back">← Back to symptoms</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-panel" id="step-panel-4">
+          <div class="alert alert-danger" id="red-flag-alert" style="display:none">
+            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div>
+              <div class="alert-title">RED FLAG — Notify Physician Immediately</div>
+              <div class="alert-desc">ผู้ป่วยรายนี้มีอาการที่เร่งด่วน กรุณารายงานแพทย์ให้ทราบโดยเร็ว.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div id="result-banner" class="result-banner low"></div>
+            <div class="card-body" style="display:flex;flex-direction:column;gap:20px">
+              <div>
+                <div class="section-title">ความเห็นจาก AI (AI Impression)</div>
+                <div class="ai-box" id="ai-result-box"></div>
+              </div>
+              <div>
+                <div class="section-title">คำแนะนำทางคลินิก (Clinical Recommendations)</div>
+                <div id="recommendations"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-full btn-lg" id="btn-complete">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                New Assessment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /assess -->
+
+    <!-- ░░░░ EDUCATION ░░░░ -->
+    <div id="page-education" class="page">
+      <div class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Health Education · สุขศึกษา</h2>
+            <p>Evidence-based information for healthcare personnel and patients</p>
+          </div>
+          <div class="tabs-nav mb-20">
+            <button class="tab-btn active" id="tab-prevention">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Prevention
+            </button>
+            <button class="tab-btn" id="tab-self-care">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Self-Care
+            </button>
+            <button class="tab-btn" id="tab-5w1h">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              5W1H
+            </button>
+          </div>
+          <div class="tab-panel active" id="tab-prevention-panel">
+            <div class="card mb-16">
+              <div class="card-header edu-section-header">
+                <div style="display:flex;align-items:center;gap:10px">
+                  <div class="edu-section-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                  <div class="card-title">Disease Prevention · การป้องกันโรค</div>
+                </div>
+              </div>
+              <div class="card-body" style="display:flex;flex-direction:column;gap:24px">
+                <div class="edu-row">
+                  <div>
+                    <h3 class="edu-h3">Vaccination · การฉีดวัคซีน</h3>
+                    <p style="font-size:13px;color:var(--text-muted);line-height:1.8">วัคซีนอีสุกอีใสมีประสิทธิภาพป้องกันโรคได้ประมาณ <strong>90%</strong> แนะนำให้ฉีด 2 เข็ม เข็มแรกเมื่ออายุ 12–15 เดือน เข็มที่สองอายุ 4–6 ปี</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">
+                      <span class="chip chip-green">Varivax® (Merck)</span>
+                      <span class="chip chip-green">ProQuad® (MMRV)</span>
+                      <span class="chip chip-brown">Varilrix® (GSK)</span>
+                    </div>
+                  </div>
+                  <div class="edu-img-wrap">
+                    <img src="https://livhospital.b-cdn.net/wp-content/uploads/2026/01/06130443/Dec-5079_image_1.webp" alt="Varicella vaccination" loading="lazy" />
+                    <div class="edu-img-caption">การฉีดวัคซีนอีสุกอีใส / Varicella vaccination</div>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div class="edu-row">
+                  <div class="edu-img-wrap">
+                    <img src="https://www.unityhc.com/wp-content/uploads/2020/12/Hand-Washing-Blog-Banner-1024x576.png" alt="Handwashing" loading="lazy" />
+                    <div class="edu-img-caption">Handwashing ≥ 20 seconds</div>
+                  </div>
+                  <div>
+                    <h3 class="edu-h3">Personal Hygiene · สุขอนามัยส่วนบุคคล</h3>
+                    <ul class="edu-list">
+                      <li>Handwashing with soap ≥ 20 seconds</li>
+                      <li>หลีกเลี่ยงการสัมผัสตุ่มน้ำหรือสารคัดหลั่งจากผู้ป่วย</li>
+                      <li>ไม่ใช้สิ่งของร่วมกับผู้ป่วย (ผ้าเช็ดตัว เสื้อผ้า)</li>
+                      <li>หลีกเลี่ยงสถานที่แออัดในช่วงที่มีการระบาด</li>
+                    </ul>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div>
+                  <h3 class="edu-h3" style="margin-bottom:14px">Hospital Precautions</h3>
+                  <div class="edu-row">
+                    <ul class="edu-list">
+                      <li><strong>Airborne Precautions:</strong> Negative-pressure room, N95 respirator</li>
+                      <li><strong>Contact Precautions:</strong> Gloves + gown at all times</li>
+                      <li><strong>Isolation period:</strong> Until all lesions are crusted (≈5–7 days after onset)</li>
+                      <li>บุคลากรที่ไม่มีภูมิคุ้มกันไม่ควรเข้าดูแลผู้ป่วย</li>
+                    </ul>
+                    <div class="edu-img-wrap">
+                      <img src="https://www.bplmedicaltechnologies.com/editor-uploads/website-2061/shutterstock-1699470949-1615987199.jpg" alt="PPE" loading="lazy" />
+                      <div class="edu-img-caption">PPE for Airborne Precautions</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="edu-highlight-box">
+                  <div style="font-size:14px;font-weight:700;margin-bottom:8px;color:var(--brown)">Post-exposure Prophylaxis (PEP)</div>
+                  <p style="font-size:13px;color:var(--text-muted);line-height:1.8">ผู้ที่ไม่มีภูมิคุ้มกันและสัมผัสผู้ป่วย ควรฉีดวัคซีนภายใน 3–5 วันหลังสัมผัส กลุ่มเสี่ยงสูงที่ฉีดวัคซีนไม่ได้ พิจารณา Varicella-Zoster Immune Globulin (VZIG)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-self-care-panel">
+            <div class="card">
+              <div class="card-header secondary-bg">
+                <div class="card-title">Self-Care · การดูแลตนเองเมื่อเป็นโรค</div>
+              </div>
+              <div class="card-body" style="display:flex;flex-direction:column;gap:20px">
+                <div>
+                  <h3 style="font-size:15px;margin-bottom:10px">Varicella Lesion Appearance · ลักษณะผื่น</h3>
+                  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:20px">
+                    <div class="edu-img-wrap" style="flex:0 0 auto;width:250px">
+                      <img src="https://www.immunize.org/wp-content/uploads/clinical/image-library/varicella/chickenpox-20-lg.jpg" alt="Varicella blister" loading="lazy" />
+                      <div class="edu-img-caption">Classic vesicle · ตุ่มน้ำใส</div>
+                    </div>
+                    <div class="edu-img-wrap" style="flex:0 0 auto;width:250px">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Chickenpox_child_back.jpg/400px-Chickenpox_child_back.jpg" alt="Chickenpox rash" loading="lazy" onerror="this.parentElement.style.display='none'" />
+                      <div class="edu-img-caption">Rash on trunk · ผื่นที่ลำตัว</div>
+                    </div>
+                  </div>
+                  <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:6px">Images: CDC / Wikimedia Commons — For educational use only</p>
+                </div>
+                <hr class="divider" />
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                  <div class="self-care-box">
+                    <div class="self-care-title">Fever Management</div>
+                    <p style="font-size:13px;color:var(--text-muted)">ใช้ยา Paracetamol ลดไข้</p>
+                    <div class="self-care-warn">ห้ามใช้ยาแอสไพรินในเด็ก — เสี่ยงต่อกลุ่มอาการไรย์</div>
+                  </div>
+                  <div class="self-care-box">
+                    <div class="self-care-title">การบรรเทาอาการคัน</div>
+                    <ul style="font-size:13px;color:var(--text-muted);padding-left:16px;line-height:1.8">
+                      <li>Calamine Lotion</li>
+                      <li>Cool compress / Oatmeal Bath</li>
+                      <li>Antihistamine (as prescribed)</li>
+                    </ul>
+                  </div>
+                  <div class="self-care-box">
+                    <div class="self-care-title">Nail Hygiene</div>
+                    <p style="font-size:13px;color:var(--text-muted)">ตัดเล็บสั้น ล้างมือบ่อย ป้องกัน secondary bacterial infection</p>
+                  </div>
+                  <div class="self-care-box">
+                    <div class="self-care-title">Hydration</div>
+                    <p style="font-size:13px;color:var(--text-muted)">ดื่มน้ำให้เพียงพอ โดยเฉพาะช่วงมีไข้ Oral lesions → soft diet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-5w1h-panel">
+            <div class="fwh-grid mb-20">
+              <div class="fwh-card"><div class="fwh-q">WHAT</div><div class="fwh-title">คืออะไร?</div><div class="fwh-desc">Varicella-Zoster Virus (VZV) infection. ผื่นหลายระยะพร้อมกัน — Pathognomonic sign</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHO</div><div class="fwh-title">ใครเสี่ยง?</div><div class="fwh-desc">ทุกวัย แต่พบบ่อยในเด็ก 1–9 ปี High-risk groups: adults, pregnant women, infants, immunocompromised</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHEN</div><div class="fwh-title">Incubation</div><div class="fwh-desc">10–21 days, mean 14–16 days. Infectious 1–2 days before rash onset until all lesions crusted</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHERE</div><div class="fwh-title">Distribution</div><div class="fwh-desc">เริ่มที่ลำตัว/ใบหน้า Centrifugal spread สู่แขนขา</div></div>
+              <div class="fwh-card"><div class="fwh-q">WHY</div><div class="fwh-title">ทำไมต้องคัดกรอง?</div><div class="fwh-desc">Breakthrough varicella อาการไม่ชัด ต้องแยกจาก Mpox, HFMD</div></div>
+              <div class="fwh-card"><div class="fwh-q">HOW</div><div class="fwh-title">Transmission</div><div class="fwh-desc">Airborne — respiratory droplets, direct contact with vesicles ต้องใช้ Airborne Precautions</div></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><div class="card-title">References (Updated 2024)</div></div>
+              <div class="card-body" style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted)">
+                <p>1. CDC. Clinical Features of Varicella. <em>Varicella Clinical Overview</em>. 2024.</p>
+                <p>2. CDC. Varicella Surveillance Manual. Chapter 17. 2024.</p>
+                <p>3. WHO. Varicella and Herpes Zoster vaccines position paper. <em>Weekly Epidemiological Record</em>. 2014;89:265–288.</p>
+                <p>4. Ali SN, et al. Mpox Skin Lesion Dataset v2.0. <em>Computers in Biology and Medicine</em>. 2024.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /education -->
+
+    <!-- ░░░░ DIFFERENTIAL ░░░░ -->
+    <div id="page-differential" class="page">
+      <div class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Differential Diagnosis · การวินิจฉัยแยกโรค</h2>
+            <p>Conditions presenting similarly to Varicella (Chickenpox)</p>
+          </div>
+          <div class="diff-grid" id="diff-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ░░░░ DASHBOARD ░░░░ -->
+    <div id="page-dashboard" class="page">
+      <div class="section">
+        <div class="container-lg">
+          <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+            <div>
+              <h2 style="margin-bottom:4px">Usage Dashboard · สถิติการใช้งาน</h2>
+              <p style="margin:0">SUKSAI — conceived, designed, and Brought to Life by RN.Patipon Wiyo</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <select id="filter-month-year" onchange="typeof renderDashboardFromGoogleSheets==='function'&&renderDashboardFromGoogleSheets()" style="padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:13px;background:#fff;cursor:pointer">
+                <option value="all">ทุกช่วงเวลา / All Time</option>
+              </select>
+              <button id="btn-refresh-dashboard" onclick="typeof renderDashboardFromGoogleSheets==='function'&&renderDashboardFromGoogleSheets()" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                Refresh
+              </button>
+            </div>
+          </div>
+          <div class="kpi-grid mb-20">
+            <div class="kpi-card">
+              <div class="kpi-row-top"><div class="kpi-label">Total Assessments</div><div class="kpi-icon kpi-icon-green"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
+              <div class="kpi-value primary" id="kpi-total">0</div>
+              <div class="kpi-sub">การประเมินทั้งหมด</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-row-top"><div class="kpi-label">High Suspicion</div><div class="kpi-icon kpi-icon-red"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div></div>
+              <div class="kpi-value danger" id="kpi-high">0</div>
+              <div class="kpi-sub" id="kpi-high-sub">0% of total</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-row-top"><div class="kpi-label">Red Flags</div><div class="kpi-icon kpi-icon-orange"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div></div>
+              <div class="kpi-value warning" id="kpi-flags">0</div>
+              <div class="kpi-sub">ผู้ป่วยมี Red Flag</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-row-top"><div class="kpi-label">Active Depts</div><div class="kpi-icon kpi-icon-teal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div></div>
+              <div class="kpi-value primary" id="kpi-depts">0</div>
+              <div class="kpi-sub">ห้องตรวจที่ใช้งาน</div>
+            </div>
+          </div>
+          <div class="charts-grid mb-20">
+            <div class="card">
+              <div class="card-header"><div><div class="card-title">Daily Case Trend · แนวโน้มรายวัน</div><div class="card-subtitle">14 วันล่าสุด</div></div></div>
+              <div class="card-body chart-body-280"><canvas id="chart-trend-line"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><div><div class="card-title">Risk Level Distribution · ระดับความเสี่ยง</div><div class="card-subtitle">High / Moderate / Low</div></div></div>
+              <div class="card-body chart-body-280 flex-center"><canvas id="chart-risk-pie"></canvas></div>
+            </div>
+          </div>
+          <div class="charts-grid mb-20">
+            <div class="card">
+              <div class="card-header"><div><div class="card-title">Cases by Department · ห้องตรวจ</div><div class="card-subtitle">Top 12 departments</div></div></div>
+              <div class="card-body chart-body-320"><canvas id="chart-dept-bar"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><div><div class="card-title">Age Distribution · ช่วงอายุ</div><div class="card-subtitle">All age groups</div></div></div>
+              <div class="card-body chart-body-320"><canvas id="chart-age-bar"></canvas></div>
+            </div>
+          </div>
+          <div class="charts-grid mb-20">
+            <div class="card">
+              <div class="card-header"><div><div class="card-title">Vaccination Status · ประวัติวัคซีน</div></div></div>
+              <div class="card-body chart-body-260 flex-center"><canvas id="chart-vaccine-pie"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-header"><div><div class="card-title">Gender Distribution · เพศ</div></div></div>
+              <div class="card-body chart-body-260 flex-center"><canvas id="chart-gender-pie"></canvas></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Recent Assessments · การประเมินล่าสุด</div></div>
+            <div id="recent-list"></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /dashboard -->
+
+    <!-- ░░░░ CRITERIA PAGE ░░░░ -->
+    <div id="page-criteria" class="page">
+      <div class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Scoring Criteria · เกณฑ์การให้คะแนน</h2>
+            <p>Varicella Clinical Scoring System — เกณฑ์อิงตาม CDC 2024</p>
+          </div>
+          <div class="card mb-16">
+            <div class="card-header primary-bg">
+              <div class="card-title">Major Criteria · เกณฑ์หลัก (2 คะแนน/ข้อ)</div>
+            </div>
+            <div class="card-body">
+              <table style="width:100%;border-collapse:collapse;font-size:13px">
+                <thead><tr style="background:var(--primary-light)"><th style="padding:8px 12px;text-align:left">อาการ (Thai)</th><th style="padding:8px 12px;text-align:left">English</th><th style="padding:8px 12px;text-align:center">คะแนน</th></tr></thead>
+                <tbody>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ตุ่มน้ำใส</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Vesicle</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">อาการคัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Pruritus</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นกระจายทั่วตัว</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Generalized rash</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นเริ่มที่ลำตัว</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Truncal onset</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นหลายระยะพร้อมกัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Pleomorphic lesions</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                  <tr><td style="padding:8px 12px">มีสะเก็ด / ตกสะเก็ด</td><td style="padding:8px 12px">Crusting present</td><td style="padding:8px 12px;text-align:center"><strong>+2</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card mb-16">
+            <div class="card-header secondary-bg">
+              <div class="card-title">Minor Criteria · เกณฑ์รอง (1 คะแนน/ข้อ)</div>
+            </div>
+            <div class="card-body">
+              <table style="width:100%;border-collapse:collapse;font-size:13px">
+                <thead><tr style="background:rgba(139,94,60,.06)"><th style="padding:8px 12px;text-align:left">อาการ (Thai)</th><th style="padding:8px 12px;text-align:left">English</th><th style="padding:8px 12px;text-align:center">คะแนน</th></tr></thead>
+                <tbody>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">มีไข้ > 37.5°C</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Fever > 37.5°C</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ปวดศีรษะ</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Headache</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">เบื่ออาหาร</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Anorexia</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">อ่อนเพลีย</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Fatigue / Malaise</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ประวัติสัมผัสโรค 10–21 วัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Exposure history 10–21 days</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                  <tr><td style="padding:8px 12px">ไม่เคยเป็นหรือได้รับวัคซีน</td><td style="padding:8px 12px">No prior varicella / vaccine</td><td style="padding:8px 12px;text-align:center"><strong>+1</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Score Interpretation · การแปลผลคะแนน</div></div>
+            <div class="card-body" style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(224,49,49,.06);border-radius:8px">
+                <span style="font-size:18px;font-weight:800;color:#e03131;min-width:60px">≥ 7</span>
+                <div><div style="font-weight:700;color:#e03131">High Suspicion (สงสัยระดับสูง)</div><div style="font-size:12px;color:var(--text-muted)">Varicella likely → Airborne Precautions + Notify physician</div></div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(240,140,0,.06);border-radius:8px">
+                <span style="font-size:18px;font-weight:800;color:#f08c00;min-width:60px">4–6</span>
+                <div><div style="font-weight:700;color:#f08c00">Moderate Suspicion (สงสัยระดับปานกลาง)</div><div style="font-size:12px;color:var(--text-muted)">Monitor closely, consider isolation, consult physician</div></div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(61,173,138,.06);border-radius:8px">
+                <span style="font-size:18px;font-weight:800;color:var(--primary);min-width:60px">0–3</span>
+                <div><div style="font-weight:700;color:var(--primary)">Low Suspicion (สงสัยระดับน้อย)</div><div style="font-size:12px;color:var(--text-muted)">Varicella less likely, consider other diagnoses</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /criteria -->
+
+  </main>
+
+  <!-- ════════════════ BOTTOM NAV (mobile) ════════════════ -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-link active" data-page="home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#" class="nav-link" data-page="assess">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>Assess</span>
+    </a>
+    <a href="#" class="nav-link" data-page="education">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <span>Education</span>
+    </a>
+    <a href="#" class="nav-link" data-page="differential">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>Diff Dx</span>
+    </a>
+    <a href="#" class="nav-link" data-page="dashboard">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Dashboard</span>
+    </a>
+    <a href="#" class="nav-link" data-page="criteria">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>Criteria</span>
+    </a>
+  </nav>
+
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="./script.js"></script>
+<script src="./charts-enhanced.js"></script>
+<script src="./google-sheets-integration.js"></script>
+</body>
+</html>
