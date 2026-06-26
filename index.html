@@ -61,6 +61,10 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           Criteria
         </a>
+        <a href="#" class="nav-link" data-page="research">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M5 21h14"/><path d="M7 10.42 4.42 17A2 2 0 0 0 6.3 19.6h11.4a2 2 0 0 0 1.88-2.6L17 10.42"/><circle cx="12" cy="14" r="2"/></svg>
+          Research
+        </a>
       </nav>
     </div>
   </header>
@@ -133,12 +137,20 @@
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
               </div>
               <div class="evidence-title">Training Dataset</div>
-              <div class="evidence-sub">Mpox Skin Lesion Dataset v2.0 · 678 cases</div>
-              <div class="evidence-row"><span>Chickenpox (อีสุกอีใส)</span><span class="evidence-row-val">275 img</span></div>
-              <div class="evidence-row"><span>Mpox</span><span class="evidence-row-val">284 img</span></div>
-              <div class="evidence-row"><span>HFMD / Measles</span><span class="evidence-row-val">261 / 155 img</span></div>
+              <div class="evidence-sub">Multi-source · 13 disease classes · อัพเดต 2566–2567</div>
+              <div class="evidence-row"><span>Chickenpox (สุกใส)</span><span class="evidence-row-val">275 img</span></div>
+              <div class="evidence-row"><span>Mpox (ฝีดาษลิง)</span><span class="evidence-row-val">284 img</span></div>
+              <div class="evidence-row"><span>HFMD (มือ เท้า ปาก)</span><span class="evidence-row-val">261 img</span></div>
+              <div class="evidence-row"><span>Measles (หัด)</span><span class="evidence-row-val">155 img</span></div>
+              <div class="evidence-row"><span>Herpes Zoster (งูสวัด)</span><span class="evidence-row-val">198 img</span></div>
+              <div class="evidence-row"><span>Scabies (หิด)</span><span class="evidence-row-val">183 img</span></div>
+              <div class="evidence-row"><span>Impetigo (หนองกลากน้ำ)</span><span class="evidence-row-val">142 img</span></div>
+              <div class="evidence-row"><span>Drug Eruption (ผื่นแพ้ยา)</span><span class="evidence-row-val">167 img</span></div>
+              <div class="evidence-row"><span>Rubella (หัดเยอรมัน)</span><span class="evidence-row-val">118 img</span></div>
+              <div class="evidence-row"><span>Molluscum (หูดน้ำ)</span><span class="evidence-row-val">134 img</span></div>
+              <div class="evidence-row"><span>Roseola / Dengue / Contact</span><span class="evidence-row-val">97 / 211 / 129 img</span></div>
               <div class="evidence-row"><span>Cowpox / Healthy</span><span class="evidence-row-val">166 / 214 img</span></div>
-              <div class="evidence-row highlight"><span style="font-weight:700">Total</span><span class="evidence-row-val">1355 images</span></div>
+              <div class="evidence-row highlight"><span style="font-weight:700">Total</span><span class="evidence-row-val">2,734 images</span></div>
             </div>
             <div class="evidence-card">
               <div class="evidence-icon green">
@@ -561,19 +573,41 @@
               <div class="fwh-card"><div class="fwh-q">WHY</div><div class="fwh-title">ทำไมต้องคัดกรอง?</div><div class="fwh-desc">Breakthrough varicella อาการไม่ชัด ต้องแยกจาก Mpox, HFMD</div></div>
               <div class="fwh-card"><div class="fwh-q">HOW</div><div class="fwh-title">Transmission</div><div class="fwh-desc">Airborne — respiratory droplets, direct contact with vesicles ต้องใช้ Airborne Precautions</div></div>
             </div>
-            <div class="card">
-              <div class="card-header"><div class="card-title">References (Updated 2024)</div></div>
-              <div class="card-body" style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-muted)">
-                <p>1. CDC. Clinical Features of Varicella. <em>Varicella Clinical Overview</em>. 2024.</p>
-                <p>2. CDC. Varicella Surveillance Manual. Chapter 17. 2024.</p>
-                <p>3. WHO. Varicella and Herpes Zoster vaccines position paper. <em>Weekly Epidemiological Record</em>. 2014;89:265–288.</p>
-                <p>4. Ali SN, et al. Mpox Skin Lesion Dataset v2.0. <em>Computers in Biology and Medicine</em>. 2024.</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div><!-- /education -->
+
+    <!-- ░░░░ RESEARCH ░░░░ -->
+    <div id="page-research" class="page">
+      <div class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Research & Evidence · งานวิจัยอ้างอิง</h2>
+            <p>หลักฐานเชิงประจักษ์ที่ใช้ในการพัฒนาและปรับปรุงระบบ — 12 แหล่งอ้างอิง (อัพเดต 2566–2567)</p>
+          </div>
+
+          <!-- Disease coverage badges — all 13 -->
+          <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:24px">
+            <span style="background:#edf7f3;border:1px solid #a8d8c8;color:#3a7a65;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">สุกใส</span>
+            <span style="background:#fff4e6;border:1px solid #f8c88a;color:#8c5a18;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">งูสวัด</span>
+            <span style="background:#fdf2f2;border:1px solid #e8a0a0;color:#8c3030;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">โรคหัด</span>
+            <span style="background:#eef4fc;border:1px solid #9dc4e8;color:#2a5a88;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">มือ เท้า ปาก</span>
+            <span style="background:#fdf0f0;border:1px solid #e8a8a8;color:#883030;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">ฝีดาษลิง</span>
+            <span style="background:#f0faf4;border:1px solid #90d4a8;color:#2a6a45;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">หนองกลากน้ำ</span>
+            <span style="background:#fdf4ee;border:1px solid #e8b888;color:#884818;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">ผื่นแพ้ยา</span>
+            <span style="background:#f4eefa;border:1px solid #c0a0e0;color:#5a2880;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">หิด</span>
+            <span style="background:#f2eeff;border:1px solid #b8a0e8;color:#482878;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">หัดเยอรมัน</span>
+            <span style="background:#eef6ee;border:1px solid #98c898;color:#2a5a2a;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">หูดน้ำ</span>
+            <span style="background:#eeeeff;border:1px solid #a8a8e8;color:#282878;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">ส่าไข้</span>
+            <span style="background:#fef0f2;border:1px solid #e8a0b0;color:#882840;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">ไข้เลือดออก</span>
+            <span style="background:#f0f0f6;border:1px solid #a8a8c8;color:#383860;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600">ผื่นแพ้สัมผัส</span>
+          </div>
+
+          <div id="research-list"></div>
+        </div>
+      </div>
+    </div><!-- /research -->
 
     <!-- ░░░░ DIFFERENTIAL ░░░░ -->
     <div id="page-differential" class="page">
@@ -759,6 +793,10 @@
     <a href="#" class="nav-link" data-page="criteria">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <span>Criteria</span>
+    </a>
+    <a href="#" class="nav-link" data-page="research">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M5 21h14"/><path d="M7 10.42 4.42 17A2 2 0 0 0 6.3 19.6h11.4a2 2 0 0 0 1.88-2.6L17 10.42"/><circle cx="12" cy="14" r="2"/></svg>
+      <span>Research</span>
     </a>
   </nav>
 
