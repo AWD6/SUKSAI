@@ -73,14 +73,14 @@ const DIFF_DX = [
     tags:['Palms & soles','Oral lesions','Enterovirus','Not itchy'], tagColors:['blue','blue','purple','green'],
   },
   {
-    nameEn:'Mpox (Monkeypox)', nameTh:'ฝีดาษลิง', similarity:'high',
+    nameEn:'Mpox (Monkeypox)', nameTh:'ฝีดาษลิง (Mpox)', similarity:'high',
     imgUrl:'https://static.independent.co.uk/2025/02/03/12/03091407-3cdf8fce-34c4-4a1c-9d0f-b0a82a4f24d2.jpg',
     keyDiff:'Deep firm pustules, uniform stage, prominent lymphadenopathy, palms/soles/face involved',
     distinguishTh:'Mpox: ตุ่มแน่น ลึก สม่ำเสมอ ต่อมน้ำเหลืองโต · อีสุกอีใส: บาง หลายระยะ คัน',
     tags:['Lymphadenopathy','Palms & soles','Same stage','Deep pustules'], tagColors:['red','red','orange','orange'],
   },
   {
-    nameEn:'Impetigo', nameTh:'หนองกลากน้ำ', similarity:'medium',
+    nameEn:'Impetigo', nameTh:'หนองกลากน้ำ / Impetigo', similarity:'medium',
     imgUrl:'https://www.lcclinics.com/wp-content/uploads/2018/05/%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B9%81%E0%B8%9C%E0%B8%A5%E0%B8%9E%E0%B8%B8%E0%B8%9E%E0%B8%AD%E0%B8%87.jpg',
     keyDiff:'Honey-colored crusts · Bacterial (Staph/Strep) · Localized · No systemic fever typical',
     distinguishTh:'Impetigo: สะเก็ดน้ำผึ้ง แบคทีเรีย จำกัดบริเวณ · อีสุกอีใส: ไวรัส กระจาย',
@@ -101,35 +101,35 @@ const DIFF_DX = [
     tags:['Nocturnal itch','Burrows','Finger webs','Sarcoptes'], tagColors:['orange','orange','orange','purple'],
   },
   {
-    nameEn:'Rubella', nameTh:'หัดเยอรมัน', similarity:'medium',
+    nameEn:'Rubella', nameTh:'หัดเยอรมัน (Rubella)', similarity:'medium',
     imgUrl:'https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/BigBead/rubella_bigbead/1800x1200_medicalimages_rm_rubella_bigbead.jpg',
     keyDiff:'Fine maculopapular rash, Forchheimer spots, lymphadenopathy (post-auricular/occipital)',
     distinguishTh:'หัดเยอรมัน: ผื่นละเอียด ต่อมน้ำเหลืองหลังหูโต · อีสุกอีใส: ตุ่มน้ำ คัน',
     tags:['Forchheimer spots','Lymphadenopathy','Fine rash'], tagColors:['red','red','orange'],
   },
   {
-    nameEn:'Molluscum Contagiosum', nameTh:'หูดน้ำ', similarity:'medium',
+    nameEn:'Molluscum Contagiosum', nameTh:'หูดน้ำ (Molluscum Contagiosum)', similarity:'medium',
     imgUrl:'https://cms.pulse-clinic.com.sg/user/uploads/f44b6873-87b7-438a-8b10-24b4e1e31b49.webp',
     keyDiff:'Pearly, umbilicated papules · Poxvirus · Usually not itchy or painful · Central dimple',
     distinguishTh:'หูดน้ำ: ตุ่มเงา มีรอยบุ๋มตรงกลาง ไม่คัน · อีสุกอีใส: ตุ่มน้ำ คัน',
     tags:['Umbilicated','Pearly','Poxvirus'], tagColors:['blue','blue','purple'],
   },
   {
-    nameEn:'Roseola Infantum', nameTh:'ส่าไข้', similarity:'medium',
+    nameEn:'Roseola Infantum', nameTh:'ส่าไข้ (Roseola Infantum)', similarity:'medium',
     imgUrl:'https://upload.medbullets.com/topic/120584/images/roseola%20rash%20formatted.jpg',
     keyDiff:'High fever for 3–5 days, then rash appears as fever drops · HHV-6/HHV-7 · Infants < 2 years',
     distinguishTh:'ส่าไข้: ไข้ลดแล้วผื่นขึ้น · อีสุกอีใส: ไข้พร้อมผื่น',
     tags:['Fever first','Infants','HHV-6'], tagColors:['orange','blue','purple'],
   },
   {
-    nameEn:'Dengue with Rash', nameTh:'ไข้เลือดออก', similarity:'medium',
+    nameEn:'Dengue with Rash', nameTh:'ไข้เลือดออก (Dengue with Rash)', similarity:'medium',
     imgUrl:'https://dermaclinic.com.np/wp-content/uploads/2025/06/Dengue-Rashes.jpg.webp',
     keyDiff:'White islands in a sea of red · High fever, body ache · Hemorrhagic signs · Not vesicular',
     distinguishTh:'ไข้เลือดออก: ผื่นแดงสลับจุดขาว ไม่เป็นตุ่มน้ำ · อีสุกอีใส: ตุ่มน้ำ',
     tags:['White islands','High fever','Non-vesicular'], tagColors:['red','red','blue'],
   },
   {
-    nameEn:'Contact Dermatitis', nameTh:'ผื่นแพ้สัมผัส', similarity:'medium',
+    nameEn:'Contact Dermatitis', nameTh:'ผื่นแพ้สัมผัส (Contact Dermatitis)', similarity:'medium',
     imgUrl:'https://doralhw.org/wp-content/uploads/2025/09/Contact-Dermatitis-scaled.jpg',
     keyDiff:'Localized to contact area · Itchy, red, sometimes vesicles · History of irritant/allergen exposure',
     distinguishTh:'แพ้สัมผัส: เฉพาะจุดที่สัมผัสสาร · อีสุกอีใส: กระจายทั่วตัว',
@@ -159,17 +159,18 @@ const state = {
 /* ═══ BODY MAP DATA ═══════════════════════════════════════════ */
 const BODY_ZONES = {
   front: [
-    { id:'head',        th:'ศีรษะ / Head',         shape:'ellipse', cx:100, cy:36, rx:26, ry:32 },
+    { id:'head',        th:'ใบหน้า/ศีรษะ',         shape:'ellipse', cx:100, cy:36, rx:26, ry:32 },
     { id:'neck',        th:'คอ / Neck',             shape:'rect',    x:88,  y:68, w:24, h:16 },
     { id:'chest-l',     th:'หน้าอก (ซ้าย)',        shape:'rect',    x:62,  y:84, w:36, h:50 },
     { id:'chest-r',     th:'หน้าอก (ขวา)',         shape:'rect',    x:102, y:84, w:36, h:50 },
-    { id:'abdomen',     th:'ช่องท้อง / Abdomen',   shape:'rect',    x:66,  y:134,w:68, h:46 },
+    { id:'abdomen',     th:'ช่องท้อง / Abdomen',   shape:'rect',    x:66,  y:134,w:68, h:40 },
+    { id:'groin',       th:'ขาหนีบ/อวัยวะเพศ',     shape:'rect',    x:78,  y:174,w:44, h:18 },
     { id:'left-arm',    th:'แขนซ้าย / Left arm',   shape:'rect',    x:32,  y:84, w:28, h:96 },
     { id:'right-arm',   th:'แขนขวา / Right arm',   shape:'rect',    x:140, y:84, w:28, h:96 },
     { id:'left-hand',   th:'มือ/ฝ่ามือซ้าย',      shape:'rect',    x:28,  y:182,w:30, h:30 },
     { id:'right-hand',  th:'มือ/ฝ่ามือขวา',       shape:'rect',    x:142, y:182,w:30, h:30 },
-    { id:'left-thigh',  th:'ต้นขาซ้าย',            shape:'rect',    x:68,  y:180,w:30, h:70 },
-    { id:'right-thigh', th:'ต้นขาขวา',             shape:'rect',    x:102, y:180,w:30, h:70 },
+    { id:'left-thigh',  th:'ต้นขาซ้าย',            shape:'rect',    x:68,  y:192,w:30, h:58 },
+    { id:'right-thigh', th:'ต้นขาขวา',             shape:'rect',    x:102, y:192,w:30, h:58 },
     { id:'left-leg',    th:'แข้ง/น่องซ้าย',        shape:'rect',    x:70,  y:252,w:26, h:66 },
     { id:'right-leg',   th:'แข้ง/น่องขวา',         shape:'rect',    x:104, y:252,w:26, h:66 },
     { id:'left-foot',   th:'เท้า/ฝ่าเท้าซ้าย',    shape:'rect',    x:64,  y:320,w:32, h:20 },
@@ -180,15 +181,15 @@ const BODY_ZONES = {
     { id:'back-neck',   th:'ต้นคอ / Back neck',    shape:'rect',    x:88,  y:68, w:24, h:16 },
     { id:'upper-back-l',th:'หลังบน (ซ้าย)',        shape:'rect',    x:62,  y:84, w:36, h:50 },
     { id:'upper-back-r',th:'หลังบน (ขวา)',         shape:'rect',    x:102, y:84, w:36, h:50 },
-    { id:'lower-back',  th:'หลังล่าง / บั้นเอว',  shape:'rect',    x:66,  y:134,w:68, h:46 },
+    { id:'lower-back',  th:'หลังล่าง / บั้นเอว',  shape:'rect',    x:66,  y:134,w:68, h:40 },
+    { id:'buttocks-l',  th:'สะโพก/ก้น (ซ้าย)',    shape:'rect',    x:68,  y:174,w:30, h:46 },
+    { id:'buttocks-r',  th:'สะโพก/ก้น (ขวา)',     shape:'rect',    x:102, y:174,w:30, h:46 },
     { id:'back-left-arm',th:'แขนซ้าย (ด้านหลัง)', shape:'rect',    x:32,  y:84, w:28, h:96 },
     { id:'back-right-arm',th:'แขนขวา (ด้านหลัง)',shape:'rect',    x:140, y:84, w:28, h:96 },
     { id:'back-left-hand',th:'มือซ้าย (หลังมือ)', shape:'rect',    x:28,  y:182,w:30, h:30 },
     { id:'back-right-hand',th:'มือขวา (หลังมือ)', shape:'rect',    x:142, y:182,w:30, h:30 },
-    { id:'buttocks-l',  th:'สะโพก/ก้น (ซ้าย)',    shape:'rect',    x:68,  y:180,w:30, h:50 },
-    { id:'buttocks-r',  th:'สะโพก/ก้น (ขวา)',     shape:'rect',    x:102, y:180,w:30, h:50 },
-    { id:'back-left-leg',th:'น่องซ้าย',            shape:'rect',    x:70,  y:252,w:26, h:66 },
-    { id:'back-right-leg',th:'น่องขวา',            shape:'rect',    x:104, y:252,w:26, h:66 },
+    { id:'back-left-leg',th:'น่องซ้าย',            shape:'rect',    x:70,  y:232,w:26, h:86 },
+    { id:'back-right-leg',th:'น่องขวา',            shape:'rect',    x:104, y:232,w:26, h:86 },
     { id:'back-left-foot',th:'เท้าซ้าย (หลัง)',   shape:'rect',    x:64,  y:320,w:32, h:20 },
     { id:'back-right-foot',th:'เท้าขวา (หลัง)',   shape:'rect',    x:104, y:320,w:32, h:20 },
   ],
@@ -353,124 +354,394 @@ function initBodyMannequin() {
   renderBodyTags();
 }
 
-/* ═══ BODY PATTERN SCORING FOR 13 DISEASES ═══════════════════ */
+/* ═══ TYPICAL ZONE PATTERNS PER DISEASE (for hint display) ════
+ *  Used to show clinicians which zones are expected for top dx.
+ * ══════════════════════════════════════════════════════════════ */
+const DISEASE_PATTERNS = {
+  'Varicella (Chickenpox)': {
+    color: '#e8a020',
+    zones: ['head','chest-l','chest-r','abdomen','upper-back-l','upper-back-r','lower-back',
+            'left-arm','right-arm','left-thigh','right-thigh'],
+    note: 'ลำตัว + ใบหน้า/หัว · ฝ่ามือ/ฝ่าเท้า ไม่มีผื่น',
+    noteEn: 'Trunk + face/scalp dominant · Palms & soles SPARED'
+  },
+  'งูสวัด (Herpes Zoster)': {
+    color: '#9c59d1',
+    zones: ['upper-back-l','chest-l','left-arm'],   // example: left thoracic dermatome
+    note: 'ผื่นแถบเดียว ข้างเดียวของร่างกาย ตามแนวเส้นประสาท',
+    noteEn: 'Unilateral dermatomal band — one side only, never crosses midline'
+  },
+  'มือเท้าปาก (HFMD)': {
+    color: '#e05050',
+    zones: ['head','left-hand','right-hand','back-left-hand','back-right-hand',
+            'left-foot','right-foot','back-left-foot','back-right-foot','buttocks-l','buttocks-r'],
+    note: 'มือ + เท้า + ปาก (ตุ่มน้ำ) + ก้น · ลำตัวไม่มีผื่น',
+    noteEn: 'Hands + feet + oral + buttocks · Trunk minimal/absent'
+  },
+  'ฝีดาษลิง (Mpox)': {
+    color: '#2a8050',
+    zones: ['head','chest-l','chest-r','abdomen','upper-back-l','upper-back-r',
+            'left-hand','right-hand','back-left-hand','back-right-hand',
+            'left-foot','right-foot','back-left-foot','back-right-foot','groin'],
+    note: 'ใบหน้า + ฝ่ามือ + ฝ่าเท้า + ขาหนีบ — ตุ่มระยะเดียวกันทั่วตัว',
+    noteEn: 'Face + PALMS + SOLES + genitalia — all lesions in same stage'
+  },
+  'หัด (Measles)': {
+    color: '#cc3030',
+    zones: ['head','neck','back-neck','chest-l','chest-r','upper-back-l','upper-back-r',
+            'left-arm','right-arm','back-left-arm','back-right-arm',
+            'abdomen','lower-back','left-thigh','right-thigh'],
+    note: 'เริ่มจากหน้า → ลำคอ → ลำตัว → แขน → ขา (cephalocaudal)',
+    noteEn: 'Cephalocaudal spread: face → neck → trunk → arms → legs'
+  },
+  'ผื่นแพ้ยา (Drug Eruption)': {
+    color: '#5588cc',
+    zones: ['chest-l','chest-r','abdomen','upper-back-l','upper-back-r','lower-back',
+            'left-arm','right-arm','back-left-arm','back-right-arm',
+            'left-thigh','right-thigh','head'],
+    note: 'ผื่นสมมาตร แพร่กระจายทั่วตัว เริ่มจากลำตัวออกสู่แขนขา',
+    noteEn: 'Symmetric widespread morbilliform — trunk spreading to extremities bilaterally'
+  },
+  'หิด (Scabies)': {
+    color: '#c07030',
+    zones: ['left-hand','right-hand','back-left-hand','back-right-hand',
+            'left-arm','right-arm','back-left-arm','back-right-arm',
+            'abdomen','lower-back','buttocks-l','buttocks-r','groin'],
+    note: 'ง่ามนิ้ว/ข้อมือ + รอบเอว/บั้นเอว + ขาหนีบ + ก้น · ศีรษะไม่มีผื่น',
+    noteEn: 'Finger webs/wrists + waistband + genitalia + buttocks · Head SPARED'
+  },
+  'หัดเยอรมัน (Rubella)': {
+    color: '#e08040',
+    zones: ['head','neck','back-head','back-neck',
+            'chest-l','chest-r','upper-back-l','upper-back-r',
+            'left-arm','right-arm','back-left-arm','back-right-arm'],
+    note: 'เริ่มจากใบหน้า → ลำคอ → ลำตัว → แขน · ต่อมน้ำเหลืองท้ายทอยโต',
+    noteEn: 'Face → neck → trunk → arms · Post-auricular lymphadenopathy'
+  },
+  'หูดน้ำ (Molluscum)': {
+    color: '#6060a0',
+    zones: ['chest-l','chest-r','abdomen','upper-back-l','upper-back-r',
+            'left-arm','right-arm','left-thigh','right-thigh','groin'],
+    note: 'ลำตัว + แขนขา + ขาหนีบ · ฝ่ามือ/ฝ่าเท้า ไม่มีผื่น',
+    noteEn: 'Trunk + limbs + genitalia · Palms & soles NEVER involved'
+  },
+  'ส่าไข้ (Roseola)': {
+    color: '#d060a0',
+    zones: ['chest-l','chest-r','abdomen','upper-back-l','upper-back-r','lower-back','neck','back-neck'],
+    note: 'ลำตัวเป็นหลัก · ใบหน้า มือ เท้า ไม่มีผื่น',
+    noteEn: 'Trunk ONLY · Face, hands, feet all SPARED'
+  },
+  'ไข้เลือดออก (Dengue)': {
+    color: '#882840',
+    zones: ['chest-l','chest-r','abdomen','upper-back-l','upper-back-r','lower-back',
+            'left-thigh','right-thigh','left-leg','right-leg','back-left-leg','back-right-leg'],
+    note: 'จุดเลือดออกแข้ง/น่อง + ลำตัว · ไม่มีตุ่มน้ำ',
+    noteEn: 'Petechiae on lower legs + trunk flush · NOT vesicular'
+  },
+  'ผื่นแพ้สัมผัส (Contact Derm)': {
+    color: '#508050',
+    zones: ['head'],   // placeholder — actual site varies by allergen
+    note: 'ผื่นเฉพาะจุดสัมผัสสาร 1–2 บริเวณ ขอบชัดเจน',
+    noteEn: 'Strictly localized 1–2 zones at allergen contact site'
+  },
+  'หนองกลากน้ำ (Impetigo)': {
+    color: '#a06820',
+    zones: ['head','left-arm','right-arm','left-leg','right-leg'],
+    note: 'ใบหน้า (รอบปาก/จมูก) + แขนขา · ไม่กระจายทั่วตัว',
+    noteEn: 'Perioral/perinasal face + exposed extremities · Not generalized'
+  },
+};
+
+/* ═══ BODY PATTERN SCORING FOR 13 DISEASES ═══════════════════
+ *  Each disease has a clinically validated distribution pattern.
+ *  Scores are additive bonuses/penalties on top of a base.
+ *  Key differentiators:
+ *   • Mpox  = centrifugal (face + PALMS + SOLES)   ← opposite of Chickenpox
+ *   • VZV   = centripetal (trunk/scalp, palms SPARED)
+ *   • HFMD  = hands + feet + oral (± buttocks)
+ *   • Zoster = UNILATERAL dermatomal strip (1–3 zones, one side only)
+ *   • Scabies = finger-webs/wrists + waist/buttocks, head spared
+ *   • Roseola = trunk ONLY, face/hands/feet spared
+ *   • Contact = strictly LOCALIZED 1–2 zones
+ * ══════════════════════════════════════════════════════════════ */
 function computeDiseaseScores(score, bodyParts) {
   const p = bodyParts;
-  const has = (...ids) => ids.some(id => p.has(id));
+  const has  = (...ids) => ids.some(id => p.has(id));
+  const hasAll = (...ids) => ids.every(id => p.has(id));
 
-  const hasTrunk = has('chest-l','chest-r','abdomen','upper-back-l','upper-back-r','lower-back');
-  const hasHead  = has('head','face','back-head');
-  const hasHands = has('left-hand','right-hand','back-left-hand','back-right-hand');
-  const hasFeet  = has('left-foot','right-foot','back-left-foot','back-right-foot');
-  const hasArms  = has('left-arm','right-arm','back-left-arm','back-right-arm');
-  const hasLegs  = has('left-thigh','right-thigh','left-leg','right-leg','back-left-leg','back-right-leg','buttocks-l','buttocks-r');
+  // ── Region groups ──────────────────────────────────────────
+  const hasHead     = has('head', 'back-head');
+  const hasFace     = has('head');                                    // front head = face
+  const hasNeck     = has('neck', 'back-neck');
+  const hasChestL   = has('chest-l');
+  const hasChestR   = has('chest-r');
+  const hasTrunk    = has('chest-l','chest-r','abdomen',
+                          'upper-back-l','upper-back-r','lower-back');
+  const hasUpperBack= has('upper-back-l','upper-back-r');
+  const hasLowerBack= has('lower-back');
+  const hasAbdomen  = has('abdomen');
+  const hasGroin    = has('groin');
+  const hasArms     = has('left-arm','right-arm','back-left-arm','back-right-arm');
+  const hasHands    = has('left-hand','right-hand','back-left-hand','back-right-hand');  // palms + back of hands
+  const hasThighs   = has('left-thigh','right-thigh');
+  const hasLowerLegs= has('left-leg','right-leg','back-left-leg','back-right-leg');
+  const hasLegs     = hasThighs || hasLowerLegs;
+  const hasFeet     = has('left-foot','right-foot','back-left-foot','back-right-foot');  // soles + dorsum
+  const hasButtocks = has('buttocks-l','buttocks-r');
+
+  // Palms + soles simultaneously = key Mpox differentiator
+  const hasPalmsAndSoles = hasHands && hasFeet;
+
+  // Generalized = trunk + (arms or legs) + head
   const isGeneralized = hasTrunk && (hasArms || hasLegs) && hasHead;
   const sz = p.size;
 
-  // Unilateral check (for herpes zoster dermatomal pattern)
-  const leftIds  = ['chest-l','upper-back-l','left-arm','back-left-arm','left-thigh','left-leg','back-left-leg','buttocks-l'];
-  const rightIds = ['chest-r','upper-back-r','right-arm','back-right-arm','right-thigh','right-leg','back-right-leg','buttocks-r'];
-  const hasLeft  = leftIds.some(id => p.has(id));
-  const hasRight = rightIds.some(id => p.has(id));
-  const isUnilateral = (hasLeft && !hasRight) || (!hasLeft && hasRight);
+  // ── Unilateral/dermatomal check (Herpes Zoster) ────────────
+  const leftIds  = ['chest-l','upper-back-l','left-arm','back-left-arm',
+                    'left-thigh','left-leg','back-left-leg','buttocks-l','left-hand','back-left-hand'];
+  const rightIds = ['chest-r','upper-back-r','right-arm','back-right-arm',
+                    'right-thigh','right-leg','back-right-leg','buttocks-r','right-hand','back-right-hand'];
+  const leftCount  = leftIds.filter(id => p.has(id)).length;
+  const rightCount = rightIds.filter(id => p.has(id)).length;
+  // Strictly unilateral: zones exist, ALL on one side only
+  const isUnilateral = sz >= 1 && ((leftCount >= 1 && rightCount === 0) || (rightCount >= 1 && leftCount === 0));
 
-  // If no body parts selected: use score-based fallback
+  // ── Specific patterns ──────────────────────────────────────
+  // Centrifugal (Mpox): face PLUS palms AND soles prominently
+  const isCentrifugal = hasFace && hasPalmsAndSoles;
+  // HFMD classic: palms + soles (± oral = face zone)
+  const isHFMDPattern = hasHands && hasFeet;
+  // Roseola: trunk only — face, hands, feet all absent
+  const isTrunkOnly   = hasTrunk && !hasHead && !hasHands && !hasFeet;
+  // Scabies: finger webs (hands) + waist (abdomen / lower-back / buttocks)
+  const isScabiesWaist = has('abdomen','lower-back','buttocks-l','buttocks-r');
+  // Dengue: lower limbs + trunk petechiae, head absent
+  const isPetechial = hasTrunk && hasLowerLegs && !hasHead;
+  // Cephalocaudal (Measles): head → neck/trunk → limbs
+  const isFullCephalocaudal = hasHead && hasTrunk && hasLegs;
+
+  // ── No body parts selected: symptom-score fallback ─────────
   if (sz === 0) {
     const s = score;
     return {
-      'Varicella (Chickenpox)':       s >= 7 ? 70 : s >= 4 ? 40 : 18,
-      'งูสวัด (Herpes Zoster)':       s >= 7 ? 8  : s >= 4 ? 14 : 14,
-      'ผื่นแพ้ยา (Drug Eruption)':    s >= 4 ? 12 : 22,
-      'มือเท้าปาก (HFMD)':            s >= 7 ? 4  : s >= 4 ? 12 : 14,
-      'ฝีดาษลิง (Mpox)':              s >= 4 ? 10 : 8,
-      'ผื่นแพ้สัมผัส (Contact Derm)':s >= 4 ? 6  : 18,
-      'หิด (Scabies)':                s >= 4 ? 5  : 10,
-      'หัด (Measles)':                 s >= 4 ? 6  : 8,
-      'หัดเยอรมัน (Rubella)':         s >= 4 ? 5  : 7,
-      'หูดน้ำ (Molluscum)':           5,
-      'ส่าไข้ (Roseola)':             s >= 4 ? 4  : 6,
-      'ไข้เลือดออก (Dengue)':         s >= 4 ? 3  : 5,
-      'หนองกลากน้ำ (Impetigo)':       s >= 4 ? 3  : 8,
+      'Varicella (Chickenpox)':        s >= 7 ? 70 : s >= 4 ? 40 : 18,
+      'งูสวัด (Herpes Zoster)':        s >= 7 ? 8  : s >= 4 ? 14 : 14,
+      'ผื่นแพ้ยา (Drug Eruption)':     s >= 4 ? 12 : 22,
+      'มือเท้าปาก (HFMD)':             s >= 7 ? 4  : s >= 4 ? 12 : 14,
+      'ฝีดาษลิง (Mpox)':               s >= 4 ? 10 : 8,
+      'ผื่นแพ้สัมผัส (Contact Derm)': s >= 4 ? 6  : 18,
+      'หิด (Scabies)':                 s >= 4 ? 5  : 10,
+      'หัด (Measles)':                  s >= 4 ? 6  : 8,
+      'หัดเยอรมัน (Rubella)':          s >= 4 ? 5  : 7,
+      'หูดน้ำ (Molluscum)':            5,
+      'ส่าไข้ (Roseola)':              s >= 4 ? 4  : 6,
+      'ไข้เลือดออก (Dengue)':          s >= 4 ? 3  : 5,
+      'หนองกลากน้ำ (Impetigo)':        s >= 4 ? 3  : 8,
     };
   }
 
   const sc = {};
 
-  // 1. Varicella — generalized, trunk-first
-  sc['Varicella (Chickenpox)'] = score * 2.2;
-  if (hasTrunk) sc['Varicella (Chickenpox)'] += 10;
-  if (isGeneralized) sc['Varicella (Chickenpox)'] += 8;
-  if (hasHead) sc['Varicella (Chickenpox)'] += 4;
-  if (hasHands && !hasTrunk) sc['Varicella (Chickenpox)'] -= 6;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 1. VARICELLA (Chickenpox)
+  //    Pattern: CENTRIPETAL — trunk/scalp first, then face/proximal limbs.
+  //    KEY: palms and soles are SPARED (unlike Mpox).
+  //    Multiple lesion stages simultaneously on trunk.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['Varicella (Chickenpox)'] = 8 + score * 1.8;
+  if (hasTrunk)                          sc['Varicella (Chickenpox)'] += 16; // trunk = hallmark
+  if (hasTrunk && hasHead)               sc['Varicella (Chickenpox)'] += 10; // trunk + face = classic
+  if (isGeneralized)                     sc['Varicella (Chickenpox)'] += 8;  // generalized OK
+  if (hasTrunk && hasArms)               sc['Varicella (Chickenpox)'] += 4;
+  if (hasPalmsAndSoles)                  sc['Varicella (Chickenpox)'] -= 22; // CRITICAL: palms+soles = Mpox, NOT VZV
+  if (isCentrifugal)                     sc['Varicella (Chickenpox)'] -= 18; // centrifugal pattern = Mpox
+  if (hasHands && !hasTrunk)             sc['Varicella (Chickenpox)'] -= 10; // hands without trunk unusual for VZV
 
-  // 2. Herpes Zoster — dermatomal, unilateral
-  sc['งูสวัด (Herpes Zoster)'] = Math.max(0, (16 - score) * 0.7);
-  if (isUnilateral) sc['งูสวัด (Herpes Zoster)'] += 14;
-  if (!isGeneralized && sz >= 1) sc['งูสวัด (Herpes Zoster)'] += 6;
-  if (isGeneralized) sc['งูสวัด (Herpes Zoster)'] -= 8;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 2. HERPES ZOSTER (งูสวัด)
+  //    Pattern: DERMATOMAL — unilateral band following a nerve root.
+  //    Most common: intercostal T3–L2 (trunk, one side).
+  //    Ophthalmic: forehead/eye area (face, one side).
+  //    MUST NOT cross midline; generalized zoster only in immunocompromised.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['งูสวัด (Herpes Zoster)'] = 4;
+  if (isUnilateral)                      sc['งูสวัด (Herpes Zoster)'] += 26; // CRITICAL: unilateral = strongest signal
+  if (isUnilateral && sz <= 3)           sc['งูสวัด (Herpes Zoster)'] += 10; // narrow dermatomal strip
+  if (isUnilateral && sz === 1)          sc['งูสวัด (Herpes Zoster)'] += 6;  // single zone dermatomal
+  if (!isUnilateral && sz > 0)           sc['งูสวัด (Herpes Zoster)'] -= 12; // bilateral = NOT typical zoster
+  if (isGeneralized)                     sc['งูสวัด (Herpes Zoster)'] -= 18; // generalized = very atypical
+  if (hasPalmsAndSoles)                  sc['งูสวัด (Herpes Zoster)'] -= 8;
 
-  // 3. HFMD — hands + feet (± oral)
-  sc['มือเท้าปาก (HFMD)'] = Math.max(0, 14 - score * 1.0);
-  if (hasHands && hasFeet) sc['มือเท้าปาก (HFMD)'] += 14;
-  if (hasHands && hasFeet && hasHead) sc['มือเท้าปาก (HFMD)'] += 4;
-  if (hasTrunk && !hasHands && !hasFeet) sc['มือเท้าปาก (HFMD)'] -= 8;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 3. HFMD (มือเท้าปาก)
+  //    Pattern: HANDS + FEET + ORAL MUCOSA (mouth sores).
+  //    Characteristic: vesicles/papules on PALMS and SOLES.
+  //    Also: BUTTOCKS involvement (especially in children).
+  //    Trunk involvement is MINIMAL or absent.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['มือเท้าปาก (HFMD)'] = 4;
+  if (isHFMDPattern)                     sc['มือเท้าปาก (HFMD)'] += 24; // hands + feet = hallmark
+  if (isHFMDPattern && hasHead)          sc['มือเท้าปาก (HFMD)'] += 10; // + oral = classic triad
+  if (hasButtocks)                       sc['มือเท้าปาก (HFMD)'] += 8;  // buttocks = characteristic
+  if (isHFMDPattern && hasButtocks)      sc['มือเท้าปาก (HFMD)'] += 6;  // triad + buttocks = very high confidence
+  if (hasTrunk && !hasHands && !hasFeet) sc['มือเท้าปาก (HFMD)'] -= 16; // trunk only = NOT HFMD
+  if (hasHands && !hasFeet && sz <= 2)   sc['มือเท้าปาก (HFMD)'] -= 4;  // hands alone less specific
 
-  // 4. Mpox — face + palms + soles (uniform stage)
-  sc['ฝีดาษลิง (Mpox)'] = 6 + score * 0.8;
-  if (hasHead && hasHands && hasFeet) sc['ฝีดาษลิง (Mpox)'] += 16;
-  if (hasHead && hasHands) sc['ฝีดาษลิง (Mpox)'] += 6;
-  if (!hasHead && !hasHands) sc['ฝีดาษลิง (Mpox)'] -= 4;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 4. MPOX (ฝีดาษลิง)
+  //    Pattern: CENTRIFUGAL — face/oral > trunk > PALMS & SOLES.
+  //    KEY: palms and soles are PROMINENTLY INVOLVED (opposite of Chickenpox).
+  //    Uniform lesion stages (all same stage = deep pustule/umbilicated).
+  //    Genital/groin lesions are common (especially 2022–2024 clade).
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['ฝีดาษลิง (Mpox)'] = 5 + score * 0.6;
+  if (isCentrifugal)                     sc['ฝีดาษลิง (Mpox)'] += 28; // PATHOGNOMONIC: face + palms + soles
+  if (hasFace && hasHands)               sc['ฝีดาษลิง (Mpox)'] += 10; // face + palms
+  if (hasFace && hasFeet)                sc['ฝีดาษลิง (Mpox)'] += 8;  // face + soles
+  if (hasPalmsAndSoles && !hasFace)      sc['ฝีดาษลิง (Mpox)'] += 10; // palms+soles still very suggestive
+  if (hasGroin)                          sc['ฝีดาษลิง (Mpox)'] += 10; // genital lesions = common in Mpox
+  if (hasGroin && hasFace)               sc['ฝีดาษลิง (Mpox)'] += 6;
+  if (!hasHands && !hasFeet && !hasHead) sc['ฝีดาษลิง (Mpox)'] -= 10; // no extremity/face = less likely
 
-  // 5. Measles — cephalocaudal (head → trunk → limbs)
-  sc['หัด (Measles)'] = Math.max(0, 12 - Math.abs(score - 5) * 1.2);
-  if (hasHead && hasTrunk && hasLegs) sc['หัด (Measles)'] += 10;
-  if (hasHead && !hasTrunk) sc['หัด (Measles)'] += 5; // early phase
-  if (!hasHead) sc['หัด (Measles)'] -= 4;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 5. MEASLES (หัด)
+  //    Pattern: CEPHALOCAUDAL spread — starts behind ears/face,
+  //    spreads to neck → trunk → arms → legs (3–4 days).
+  //    Confluent morbilliform rash. Koplik spots (oral) before rash.
+  //    Head/face MUST be involved; feet/palms spared.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['หัด (Measles)'] = 4;
+  if (hasHead && hasTrunk)               sc['หัด (Measles)'] += 18; // face + trunk = cephalocaudal started
+  if (isFullCephalocaudal)               sc['หัด (Measles)'] += 8;  // full spread = advanced measles
+  if (hasHead && hasNeck && hasTrunk)    sc['หัด (Measles)'] += 6;  // neck spread = classic sequence
+  if (hasHead && sz <= 2 && !hasTrunk)   sc['หัด (Measles)'] += 8;  // early measles = face only
+  if (!hasHead)                          sc['หัด (Measles)'] -= 14;  // measles WITHOUT face = very unlikely
+  if (hasPalmsAndSoles)                  sc['หัด (Measles)'] -= 10;  // palms+soles = Mpox, not measles
 
-  // 6. Drug Eruption — widespread + symmetric
-  sc['ผื่นแพ้ยา (Drug Eruption)'] = 8 + score * 0.5;
-  if (isGeneralized) sc['ผื่นแพ้ยา (Drug Eruption)'] += 10;
-  if (!isUnilateral && sz >= 3) sc['ผื่นแพ้ยา (Drug Eruption)'] += 6;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 6. DRUG ERUPTION (ผื่นแพ้ยา)
+  //    Pattern: SYMMETRIC, widespread morbilliform rash.
+  //    Trunk-dominant but can involve extremities symmetrically.
+  //    Appears 7–14 days after starting new medication.
+  //    Pruritic, blanchable; progresses centrifugally from trunk.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['ผื่นแพ้ยา (Drug Eruption)'] = 6 + score * 0.4;
+  if (isGeneralized)                     sc['ผื่นแพ้ยา (Drug Eruption)'] += 16; // widespread = drug eruption
+  if (!isUnilateral && sz >= 4)          sc['ผื่นแพ้ยา (Drug Eruption)'] += 10; // bilateral symmetric
+  if (hasChestL && hasChestR && hasArms) sc['ผื่นแพ้ยา (Drug Eruption)'] += 6;  // bilateral trunk+arms
+  if (hasTrunk && hasArms && hasLegs)    sc['ผื่นแพ้ยา (Drug Eruption)'] += 6;
+  if (sz === 1)                          sc['ผื่นแพ้ยา (Drug Eruption)'] -= 12;  // very localized = not drug eruption
+  if (isUnilateral && sz <= 2)           sc['ผื่นแพ้ยา (Drug Eruption)'] -= 8;   // unilateral-localized = not typical
 
-  // 7. Scabies — finger webs, wrists, waist, arms
-  sc['หิด (Scabies)'] = 6;
-  if (hasHands && hasArms) sc['หิด (Scabies)'] += 12;
-  if (hasHands && has('abdomen','lower-back')) sc['หิด (Scabies)'] += 6;
-  if (hasHead && !hasHands) sc['หิด (Scabies)'] -= 4;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 7. SCABIES (หิด)
+  //    Pattern: Finger WEBS/wrists (hands+arms), waist/belt line
+  //    (abdomen+lower-back), axillae, GENITALIA, BUTTOCKS.
+  //    HEAD SPARED in adults (not in infants).
+  //    Intense nocturnal pruritus; burrow tracks on thin skin.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['หิด (Scabies)'] = 4;
+  if (hasHands && isScabiesWaist)        sc['หิด (Scabies)'] += 22; // finger-webs + waist = PATHOGNOMONIC
+  if (hasHands && hasArms)              sc['หิด (Scabies)'] += 12;  // wrists/arms = very typical
+  if (hasButtocks)                      sc['หิด (Scabies)'] += 8;   // buttocks = characteristic
+  if (hasGroin)                         sc['หิด (Scabies)'] += 8;   // genital scabies = common
+  if (hasHands && hasButtocks && (hasAbdomen || hasLowerBack))
+                                        sc['หิด (Scabies)'] += 8;   // classic triad
+  if (hasHead && !hasHands)             sc['หิด (Scabies)'] -= 12;  // head without hands = NOT scabies (adults)
+  if (!hasHands && sz > 0)              sc['หิด (Scabies)'] -= 8;   // scabies almost always involves hands/wrists
 
-  // 8. Rubella — fine rash, upper body, post-auricular lymph
-  sc['หัดเยอรมัน (Rubella)'] = Math.max(0, 10 - Math.abs(score - 4) * 1.2);
-  if (hasHead && hasTrunk) sc['หัดเยอรมัน (Rubella)'] += 10;
-  if (hasHead && hasTrunk && !hasLegs) sc['หัดเยอรมัน (Rubella)'] += 4;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 8. RUBELLA (หัดเยอรมัน)
+  //    Pattern: Fine pink maculopapular rash — starts FACE,
+  //    spreads to neck/trunk within 24h, then to arms.
+  //    POST-AURICULAR & suboccipital lymphadenopathy (back-neck/back-head).
+  //    Rash fades in same order (face first); mild, non-confluent.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['หัดเยอรมัน (Rubella)'] = 4;
+  if (hasHead && hasTrunk)              sc['หัดเยอรมัน (Rubella)'] += 18; // face + trunk = rubella classic
+  if (hasHead && hasNeck && hasTrunk)   sc['หัดเยอรมัน (Rubella)'] += 8;  // post-auricular spread
+  if (has('back-head','back-neck'))     sc['หัดเยอรมัน (Rubella)'] += 6;  // posterior cervical nodes
+  if (hasHead && !hasTrunk && sz <= 2)  sc['หัดเยอรมัน (Rubella)'] += 6;  // early rubella = face only
+  if (!hasHead)                         sc['หัดเยอรมัน (Rubella)'] -= 10;  // no face = not rubella
+  if (hasLegs && !hasHead)              sc['หัดเยอรมัน (Rubella)'] -= 8;   // lower body without head = not rubella
+  if (hasPalmsAndSoles)                 sc['หัดเยอรมัน (Rubella)'] -= 10;  // palms+soles = Mpox not rubella
 
-  // 9. Molluscum — trunk/limbs, NOT palms/soles
-  sc['หูดน้ำ (Molluscum)'] = 6;
-  if ((hasTrunk || hasArms || hasLegs) && !hasHands && !hasFeet) sc['หูดน้ำ (Molluscum)'] += 10;
-  if (hasHands || hasFeet) sc['หูดน้ำ (Molluscum)'] -= 6;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 9. MOLLUSCUM CONTAGIOSUM (หูดน้ำ)
+  //    Pattern: Pearly umbilicated papules on TRUNK, LIMBS, FACE.
+  //    CRITICAL: NEVER on palms or soles.
+  //    In adults: often genital/groin area. In children: trunk/face/arms.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['หูดน้ำ (Molluscum)'] = 5;
+  if ((hasTrunk || hasArms || hasLegs) && !hasPalmsAndSoles)
+                                        sc['หูดน้ำ (Molluscum)'] += 12;
+  if (hasTrunk && !hasHands && !hasFeet)sc['หูดน้ำ (Molluscum)'] += 6;
+  if (hasGroin && !hasPalmsAndSoles)    sc['หูดน้ำ (Molluscum)'] += 8;  // genital molluscum = common in adults
+  if (hasPalmsAndSoles)                 sc['หูดน้ำ (Molluscum)'] -= 18; // CANNOT have molluscum on palms/soles
+  if (hasHands || hasFeet)              sc['หูดน้ำ (Molluscum)'] -= 8;
 
-  // 10. Roseola — trunk dominant, after fever resolves
-  sc['ส่าไข้ (Roseola)'] = 4;
-  if (hasTrunk && !hasHead && !hasHands && !hasFeet) sc['ส่าไข้ (Roseola)'] += 14;
-  if (hasTrunk && hasArms && !hasHead) sc['ส่าไข้ (Roseola)'] += 6;
-  if (isGeneralized) sc['ส่าไข้ (Roseola)'] -= 2;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 10. ROSEOLA (ส่าไข้ / Exanthema Subitum)
+  //    Pattern: Rose-pink macular rash on TRUNK ONLY.
+  //    Spreads slightly to neck and proximal arms.
+  //    FACE SPARED (key differentiator from rubella/measles).
+  //    HANDS & FEET SPARED. Appears abruptly after 3–4 days fever breaks.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['ส่าไข้ (Roseola)'] = 3;
+  if (isTrunkOnly)                      sc['ส่าไข้ (Roseola)'] += 24; // trunk ONLY = HALLMARK of roseola
+  if (hasTrunk && !hasHead)             sc['ส่าไข้ (Roseola)'] += 14; // trunk without face = very strong
+  if (hasTrunk && hasNeck && !hasHead)  sc['ส่าไข้ (Roseola)'] += 6;  // neck spread (but no face) is OK
+  if (hasTrunk && hasArms && !hasHead && !hasHands)
+                                        sc['ส่าไข้ (Roseola)'] += 4;
+  if (hasHead)                          sc['ส่าไข้ (Roseola)'] -= 10; // face SPARED in roseola
+  if (hasHands || hasFeet)              sc['ส่าไข้ (Roseola)'] -= 8;  // hands/feet spared
+  if (isGeneralized)                    sc['ส่าไข้ (Roseola)'] -= 6;
 
-  // 11. Dengue — trunk + petechiae on limbs, NOT vesicular
-  sc['ไข้เลือดออก (Dengue)'] = 5;
-  if (hasTrunk && hasLegs) sc['ไข้เลือดออก (Dengue)'] += 8;
-  if (isGeneralized) sc['ไข้เลือดออก (Dengue)'] += 4;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 11. DENGUE (ไข้เลือดออก)
+  //    Phase 1: Facial flushing + trunk erythema (early).
+  //    Phase 2: Maculopapular "isles of white in red sea" rash on trunk.
+  //    Petechiae on lower extremities, positive tourniquet test.
+  //    Head/face may flush but NOT maculopapular rash there.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['ไข้เลือดออก (Dengue)'] = 4;
+  if (hasTrunk && hasLowerLegs)         sc['ไข้เลือดออก (Dengue)'] += 14; // trunk + petechiae on lower legs
+  if (isPetechial)                      sc['ไข้เลือดออก (Dengue)'] += 8;  // lower legs + trunk, no head
+  if (hasTrunk && hasThighs)            sc['ไข้เลือดออก (Dengue)'] += 6;
+  if (isGeneralized)                    sc['ไข้เลือดออก (Dengue)'] += 4;
+  if (hasPalmsAndSoles)                 sc['ไข้เลือดออก (Dengue)'] -= 6;  // palms+soles prominent = Mpox
+  if (!hasTrunk)                        sc['ไข้เลือดออก (Dengue)'] -= 8;
 
-  // 12. Contact Dermatitis — localized (1–2 zones)
-  sc['ผื่นแพ้สัมผัส (Contact Derm)'] = Math.max(0, 14 - score * 1.0);
-  if (sz <= 2) sc['ผื่นแพ้สัมผัส (Contact Derm)'] += 14;
-  if (sz === 1) sc['ผื่นแพ้สัมผัส (Contact Derm)'] += 6;
-  if (isGeneralized) sc['ผื่นแพ้สัมผัส (Contact Derm)'] -= 12;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 12. CONTACT DERMATITIS (ผื่นแพ้สัมผัส)
+  //    Pattern: STRICTLY LOCALIZED to site of contact with allergen.
+  //    1–2 zones maximum. Well-demarcated, geometric borders.
+  //    Common sites: face, neck, hands, feet (where allergen touches).
+  //    Vesicles, weeping, pruritus at exposure site ONLY.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['ผื่นแพ้สัมผัส (Contact Derm)'] = 4;
+  if (sz === 1)                         sc['ผื่นแพ้สัมผัส (Contact Derm)'] += 24; // SINGLE zone = very characteristic
+  if (sz === 2)                         sc['ผื่นแพ้สัมผัส (Contact Derm)'] += 14; // 2 zones still localized
+  if (sz === 3)                         sc['ผื่นแพ้สัมผัส (Contact Derm)'] += 4;
+  if (sz >= 5)                          sc['ผื่นแพ้สัมผัส (Contact Derm)'] -= 10;
+  if (isGeneralized)                    sc['ผื่นแพ้สัมผัส (Contact Derm)'] -= 18; // generalized = NOT contact derm
 
-  // 13. Impetigo — localized, face/extremities
-  sc['หนองกลากน้ำ (Impetigo)'] = Math.max(0, 12 - score * 0.8);
-  if (sz <= 2 && (hasHead || hasArms)) sc['หนองกลากน้ำ (Impetigo)'] += 10;
-  if (isGeneralized) sc['หนองกลากน้ำ (Impetigo)'] -= 10;
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 13. IMPETIGO (หนองกลากน้ำ)
+  //    Pattern: PERIORAL/PERINASAL face and exposed extremities.
+  //    Honey-colored crusts. Localized 1–3 zones.
+  //    Most common: face (around nose/mouth), arms, legs.
+  //    NOT generalized; NOT palms/soles.
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  sc['หนองกลากน้ำ (Impetigo)'] = 4;
+  if (sz <= 2 && (hasHead || hasArms || hasLegs)) sc['หนองกลากน้ำ (Impetigo)'] += 14;
+  if (hasHead && sz <= 2)               sc['หนองกลากน้ำ (Impetigo)'] += 10; // perioral face = classic
+  if (sz === 1 && hasHead)              sc['หนองกลากน้ำ (Impetigo)'] += 6;  // face only = very common
+  if (sz === 1 && (hasArms || hasLegs)) sc['หนองกลากน้ำ (Impetigo)'] += 4;  // localized extremity also OK
+  if (isGeneralized)                    sc['หนองกลากน้ำ (Impetigo)'] -= 18;  // NOT generalized
+  if (hasTrunk && !hasHead && !hasArms) sc['หนองกลากน้ำ (Impetigo)'] -= 8;   // trunk only = unusual
 
-  // Floor at 0
+  // ── Floor all scores at 0 ──────────────────────────────────
   Object.keys(sc).forEach(k => { sc[k] = Math.max(0, sc[k]); });
   return sc;
 }
@@ -871,7 +1142,44 @@ function renderResults() {
     const bodyNote = bodyParts && bodyParts.length > 0
       ? `<div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">📍 Body regions factored: ${bodyParts.length} zone(s)</div>`
       : '';
-    aiBox.innerHTML = '<div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">AI Impression — Mpox Skin Lesion Dataset v2.0 + Body Map</div>' +
+
+    // Pattern hint for top diagnosis
+    const topDx = possibilities[0] ? possibilities[0].label : null;
+    const pat = topDx ? DISEASE_PATTERNS[topDx] : null;
+    const patternHint = (pat && bodyParts && bodyParts.length > 0) ? `
+      <div style="margin-top:14px;padding:10px 12px;background:#f7f8fa;border:1px solid #e2e5ec;border-radius:8px">
+        <div style="font-size:11px;font-weight:700;color:${pat.color};margin-bottom:5px;letter-spacing:.3px">
+          📌 ตำแหน่งผื่นทั่วไปสำหรับ ${topDx}
+        </div>
+        <div style="font-size:11.5px;color:#555;margin-bottom:3px">${pat.note}</div>
+        <div style="font-size:10.5px;color:#888;font-style:italic">${pat.noteEn}</div>
+      </div>` : '';
+
+    // Overlap analysis: selected vs expected zones
+    let overlapHtml = '';
+    if (pat && bodyParts && bodyParts.length > 0) {
+      const selectedSet  = new Set(bodyParts);
+      const expectedSet  = new Set(pat.zones);
+      const matched   = [...selectedSet].filter(z => expectedSet.has(z)).length;
+      const unexpected = [...selectedSet].filter(z => !expectedSet.has(z)).length;
+      const pct = Math.round((matched / Math.max(expectedSet.size, 1)) * 100);
+      const pctColor = pct >= 60 ? '#2a7a40' : pct >= 30 ? '#c07030' : '#cc3030';
+      overlapHtml = `
+      <div style="margin-top:8px;display:flex;gap:10px;font-size:11px;flex-wrap:wrap">
+        <span style="background:#edf7f0;border:1px solid #b0d8c0;color:#2a7a40;padding:3px 8px;border-radius:20px">
+          ✓ ตรงกับรูปแบบ ${matched} บริเวณ
+        </span>
+        ${unexpected > 0 ? `<span style="background:#fff7ed;border:1px solid #e8c880;color:#c07030;padding:3px 8px;border-radius:20px">
+          ⚠ นอกรูปแบบ ${unexpected} บริเวณ
+        </span>` : ''}
+        <span style="background:#f0f4ff;border:1px solid #b0c0e8;color:${pctColor};padding:3px 8px;border-radius:20px;font-weight:700">
+          ${pct}% match
+        </span>
+      </div>`;
+    }
+
+    aiBox.innerHTML =
+      '<div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">AI Impression — Multi-source Dataset + Body Map</div>' +
       bodyNote +
       possibilities.map((p, i) => `
         <div style="margin-bottom:10px">
@@ -883,7 +1191,8 @@ function renderResults() {
           </div>
         </div>
       `).join('') +
-      '<div style="font-size:11px;color:var(--text-muted);margin-top:8px;font-style:italic;line-height:1.5">ระบบเป็นเพียงการประเมินคัดกรอง<br>ไม่สามารถทดแทนการวินิจฉัยโดยแพทย์ได้</div>';
+      patternHint + overlapHtml +
+      '<div style="font-size:11px;color:var(--text-muted);margin-top:10px;font-style:italic;line-height:1.5">ระบบเป็นเพียงการประเมินคัดกรอง<br>ไม่สามารถทดแทนการวินิจฉัยโดยแพทย์ได้</div>';
   }
 
   if (recs) {
@@ -1509,6 +1818,29 @@ function initToggleButtons() {
   });
 }
 
+/* ═══ CRITERIA PAGE TABS ══════════════════════════════════════ */
+function initCriteriaTabs() {
+  const tabs = [
+    { btn: 'ctab-scoring', panel: 'ctab-scoring-panel' },
+    { btn: 'ctab-bodymap', panel: 'ctab-bodymap-panel' },
+  ];
+  tabs.forEach(({ btn, panel }) => {
+    const btnEl = document.getElementById(btn);
+    if (!btnEl) return;
+    btnEl.addEventListener('click', () => {
+      tabs.forEach(t => {
+        const b = document.getElementById(t.btn);
+        const p = document.getElementById(t.panel);
+        if (b) b.classList.remove('active');
+        if (p) p.classList.remove('active');
+      });
+      btnEl.classList.add('active');
+      const panelEl = document.getElementById(panel);
+      if (panelEl) panelEl.classList.add('active');
+    });
+  });
+}
+
 /* ═══ INIT ════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   initDeptDropdown();
@@ -1521,6 +1853,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFileUpload();
   renderDifferential();
   renderResearchPage();
+  initCriteriaTabs();
 
   console.log('%cSUKSAI v2 — Skin Rash Assessment System (13 Diseases)', 'color:#3DAD8A;font-size:16px;font-weight:800');
   console.log('%cconceived, designed, and Brought to Life by RN.Patipon Wiyo', 'color:#8B5E3C;font-size:12px');

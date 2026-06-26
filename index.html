@@ -706,62 +706,339 @@
       <div class="section">
         <div class="container">
           <div class="section-header">
-            <h2>Scoring Criteria · เกณฑ์การให้คะแนน</h2>
-            <p>Varicella Clinical Scoring System — เกณฑ์อิงตาม CDC 2024</p>
+            <h2>Criteria · เกณฑ์และแนวทางการประเมิน</h2>
+            <p>Varicella Clinical Scoring + Body Map Disease Guide</p>
           </div>
-          <div class="card mb-16">
-            <div class="card-header primary-bg">
-              <div class="card-title">Major Criteria · เกณฑ์หลัก (2 คะแนน/ข้อ)</div>
-            </div>
-            <div class="card-body">
-              <table style="width:100%;border-collapse:collapse;font-size:13px">
-                <thead><tr style="background:var(--primary-light)"><th style="padding:8px 12px;text-align:left">อาการ (Thai)</th><th style="padding:8px 12px;text-align:left">English</th><th style="padding:8px 12px;text-align:center">คะแนน</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ตุ่มน้ำใส</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Vesicle</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">อาการคัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Pruritus</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นกระจายทั่วตัว</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Generalized rash</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นเริ่มที่ลำตัว</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Truncal onset</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นหลายระยะพร้อมกัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Pleomorphic lesions</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
-                  <tr><td style="padding:8px 12px">มีสะเก็ด / ตกสะเก็ด</td><td style="padding:8px 12px">Crusting present</td><td style="padding:8px 12px;text-align:center"><strong>+2</strong></td></tr>
-                </tbody>
-              </table>
-            </div>
+
+          <!-- Sub-tabs -->
+          <div class="tabs-nav mb-20">
+            <button class="tab-btn active" id="ctab-scoring">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Scoring Criteria
+            </button>
+            <button class="tab-btn" id="ctab-bodymap">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v7"/><path d="M9 10h6"/><path d="M9 14l-1.5 6"/><path d="M15 14l1.5 6"/></svg>
+              ตำแหน่งผื่น vs โรค
+            </button>
           </div>
-          <div class="card mb-16">
-            <div class="card-header secondary-bg">
-              <div class="card-title">Minor Criteria · เกณฑ์รอง (1 คะแนน/ข้อ)</div>
-            </div>
-            <div class="card-body">
-              <table style="width:100%;border-collapse:collapse;font-size:13px">
-                <thead><tr style="background:rgba(139,94,60,.06)"><th style="padding:8px 12px;text-align:left">อาการ (Thai)</th><th style="padding:8px 12px;text-align:left">English</th><th style="padding:8px 12px;text-align:center">คะแนน</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">มีไข้ > 37.5°C</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Fever > 37.5°C</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ปวดศีรษะ</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Headache</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">เบื่ออาหาร</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Anorexia</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">อ่อนเพลีย</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Fatigue / Malaise</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
-                  <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ประวัติสัมผัสโรค 10–21 วัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Exposure history 10–21 days</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
-                  <tr><td style="padding:8px 12px">ไม่เคยเป็นหรือได้รับวัคซีน</td><td style="padding:8px 12px">No prior varicella / vaccine</td><td style="padding:8px 12px;text-align:center"><strong>+1</strong></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header"><div class="card-title">Score Interpretation · การแปลผลคะแนน</div></div>
-            <div class="card-body" style="display:flex;flex-direction:column;gap:10px">
-              <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(224,49,49,.06);border-radius:8px">
-                <span style="font-size:18px;font-weight:800;color:#e03131;min-width:60px">≥ 7</span>
-                <div><div style="font-weight:700;color:#e03131">High Suspicion (สงสัยระดับสูง)</div><div style="font-size:12px;color:var(--text-muted)">Varicella likely → Airborne Precautions + Notify physician</div></div>
+
+          <!-- ── TAB 1: Scoring Criteria ── -->
+          <div class="tab-panel active" id="ctab-scoring-panel">
+            <div class="card mb-16">
+              <div class="card-header primary-bg">
+                <div class="card-title">Major Criteria · เกณฑ์หลัก (2 คะแนน/ข้อ)</div>
               </div>
-              <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(240,140,0,.06);border-radius:8px">
-                <span style="font-size:18px;font-weight:800;color:#f08c00;min-width:60px">4–6</span>
-                <div><div style="font-weight:700;color:#f08c00">Moderate Suspicion (สงสัยระดับปานกลาง)</div><div style="font-size:12px;color:var(--text-muted)">Monitor closely, consider isolation, consult physician</div></div>
-              </div>
-              <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(61,173,138,.06);border-radius:8px">
-                <span style="font-size:18px;font-weight:800;color:var(--primary);min-width:60px">0–3</span>
-                <div><div style="font-weight:700;color:var(--primary)">Low Suspicion (สงสัยระดับน้อย)</div><div style="font-size:12px;color:var(--text-muted)">Varicella less likely, consider other diagnoses</div></div>
+              <div class="card-body">
+                <table style="width:100%;border-collapse:collapse;font-size:13px">
+                  <thead><tr style="background:var(--primary-light)"><th style="padding:8px 12px;text-align:left">อาการ (Thai)</th><th style="padding:8px 12px;text-align:left">English</th><th style="padding:8px 12px;text-align:center">คะแนน</th></tr></thead>
+                  <tbody>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ตุ่มน้ำใส</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Vesicle</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">อาการคัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Pruritus</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นกระจายทั่วตัว</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Generalized rash</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นเริ่มที่ลำตัว</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Truncal onset</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ผื่นหลายระยะพร้อมกัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Pleomorphic lesions</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+2</strong></td></tr>
+                    <tr><td style="padding:8px 12px">มีสะเก็ด / ตกสะเก็ด</td><td style="padding:8px 12px">Crusting present</td><td style="padding:8px 12px;text-align:center"><strong>+2</strong></td></tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div>
+            <div class="card mb-16">
+              <div class="card-header secondary-bg">
+                <div class="card-title">Minor Criteria · เกณฑ์รอง (1 คะแนน/ข้อ)</div>
+              </div>
+              <div class="card-body">
+                <table style="width:100%;border-collapse:collapse;font-size:13px">
+                  <thead><tr style="background:rgba(139,94,60,.06)"><th style="padding:8px 12px;text-align:left">อาการ (Thai)</th><th style="padding:8px 12px;text-align:left">English</th><th style="padding:8px 12px;text-align:center">คะแนน</th></tr></thead>
+                  <tbody>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">มีไข้ > 37.5°C</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Fever > 37.5°C</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ปวดศีรษะ</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Headache</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">เบื่ออาหาร</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Anorexia</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">อ่อนเพลีย</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Fatigue / Malaise</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                    <tr><td style="padding:8px 12px;border-bottom:1px solid var(--border)">ประวัติสัมผัสโรค 10–21 วัน</td><td style="padding:8px 12px;border-bottom:1px solid var(--border)">Exposure history 10–21 days</td><td style="padding:8px 12px;border-bottom:1px solid var(--border);text-align:center"><strong>+1</strong></td></tr>
+                    <tr><td style="padding:8px 12px">ไม่เคยเป็นหรือได้รับวัคซีน</td><td style="padding:8px 12px">No prior varicella / vaccine</td><td style="padding:8px 12px;text-align:center"><strong>+1</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header"><div class="card-title">Score Interpretation · การแปลผลคะแนน</div></div>
+              <div class="card-body" style="display:flex;flex-direction:column;gap:10px">
+                <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(224,49,49,.06);border-radius:8px">
+                  <span style="font-size:18px;font-weight:800;color:#e03131;min-width:60px">≥ 7</span>
+                  <div><div style="font-weight:700;color:#e03131">High Suspicion (สงสัยระดับสูง)</div><div style="font-size:12px;color:var(--text-muted)">Varicella likely → Airborne Precautions + Notify physician</div></div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(240,140,0,.06);border-radius:8px">
+                  <span style="font-size:18px;font-weight:800;color:#f08c00;min-width:60px">4–6</span>
+                  <div><div style="font-weight:700;color:#f08c00">Moderate Suspicion (สงสัยระดับปานกลาง)</div><div style="font-size:12px;color:var(--text-muted)">Monitor closely, consider isolation, consult physician</div></div>
+                </div>
+                <div style="display:flex;gap:12px;align-items:center;padding:10px;background:rgba(61,173,138,.06);border-radius:8px">
+                  <span style="font-size:18px;font-weight:800;color:var(--primary);min-width:60px">0–3</span>
+                  <div><div style="font-weight:700;color:var(--primary)">Low Suspicion (สงสัยระดับน้อย)</div><div style="font-size:12px;color:var(--text-muted)">Varicella less likely, consider other diagnoses</div></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /ctab-scoring-panel -->
+
+          <!-- ── TAB 2: Body Position vs Disease Table ── -->
+          <div class="tab-panel" id="ctab-bodymap-panel">
+
+            <!-- Table 1: Position → Disease -->
+            <div class="card mb-16">
+              <div class="card-header" style="background:linear-gradient(135deg,#e8f7f3,#f0f4ff)">
+                <div class="card-title" style="display:flex;align-items:center;gap:8px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v7"/><path d="M9 10h6"/><path d="M9 14l-1.5 6"/><path d="M15 14l1.5 6"/></svg>
+                  ตำแหน่งผื่น → โรคที่มีแนวโน้มสูง
+                </div>
+              </div>
+              <div class="card-body" style="padding:0;overflow-x:auto">
+                <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:480px">
+                  <thead>
+                    <tr style="background:var(--primary-light)">
+                      <th style="padding:10px 12px;text-align:center;white-space:nowrap;min-width:100px">ตำแหน่งที่แตะ</th>
+                      <th style="padding:10px 12px;text-align:left">โรคที่ขึ้นคะแนนสูง (เรียงตามลำดับ)</th>
+                      <th style="padding:10px 12px;text-align:left;min-width:160px">ลักษณะเด่น</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- ใบหน้า/ศีรษะ -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#cc3030;display:inline-block;flex-shrink:0"></span>ใบหน้า / ศีรษะ</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(head)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="92" cy="30" r="9" fill="#e03131" opacity="0.82"/><circle cx="107" cy="24" r="7" fill="#e03131" opacity="0.7"/><circle cx="100" cy="44" r="8" fill="#e03131" opacity="0.75"/><circle cx="94" cy="52" r="7" fill="#e03131" opacity="0.65"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">หัด, หัดเยอรมัน, สุกใส, หนองกลากน้ำ</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ผื่นเริ่มที่ใบหน้า แล้วแพร่ลงลำตัว (Cephalocaudal spread) — พบในหัดและหัดเยอรมัน · หัด: มี Koplik spots ที่กระพุ้งแก้มก่อนผื่นขึ้น 1–2 วัน</td>
+                    </tr>
+                    <!-- คอ -->
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#cc3030;display:inline-block;flex-shrink:0"></span>คอ</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(neck)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="100" cy="73" r="8" fill="#e03131" opacity="0.82"/><circle cx="93" cy="79" r="7" fill="#e03131" opacity="0.7"/><circle cx="107" cy="77" r="6" fill="#e03131" opacity="0.65"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">หัด, หัดเยอรมัน, ส่าไข้</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ต่อมน้ำเหลืองที่คอ/ท้ายทอยโต = hallmark หัดเยอรมัน · ผื่นหัดแพร่ Cephalocaudal ผ่านคอลงลำตัวภายใน 2–3 วัน</td>
+                    </tr>
+                    <!-- หน้าอก -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#e8a020;display:inline-block;flex-shrink:0"></span>หน้าอก ซ้าย/ขวา</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(chest-l / chest-r)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="74" cy="100" r="9" fill="#e03131" opacity="0.82"/><circle cx="88" cy="116" r="8" fill="#e03131" opacity="0.75"/><circle cx="80" cy="130" r="7" fill="#e03131" opacity="0.7"/><circle cx="112" cy="100" r="9" fill="#e03131" opacity="0.82"/><circle cx="126" cy="116" r="8" fill="#e03131" opacity="0.75"/><circle cx="118" cy="130" r="7" fill="#e03131" opacity="0.7"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">สุกใส, ผื่นแพ้ยา, หัด</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ผื่นหนาแน่นที่ลำตัว (Centripetal distribution) = ลักษณะเฉพาะของสุกใส · ผื่นแพ้ยา SJS/TEN มักเริ่มที่ลำตัวก่อนกระจายออก</td>
+                    </tr>
+                    <!-- ช่องท้อง -->
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#c07030;display:inline-block;flex-shrink:0"></span>ช่องท้อง</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(abdomen)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="92" cy="141" r="9" fill="#e03131" opacity="0.82"/><circle cx="108" cy="150" r="8" fill="#e03131" opacity="0.75"/><circle cx="100" cy="163" r="9" fill="#e03131" opacity="0.7"/><circle cx="84" cy="155" r="7" fill="#e03131" opacity="0.65"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">สุกใส, หิด, ผื่นแพ้ยา, ไข้เลือดออก</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">หิด: รอยขุดรอบสะดือและเอว คันรุนแรงตอนกลางคืน · ส่าไข้: ผื่นชมพูซีดเริ่มที่ลำตัวหลังไข้ลด 3–5 วัน · สุกใส: ผื่นหนาแน่นที่ท้อง/หน้าอก</td>
+                    </tr>
+                    <!-- ขาหนีบ -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#2a8050;display:inline-block;flex-shrink:0"></span>ขาหนีบ / อวัยวะเพศ</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(groin)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="90" cy="179" r="8" fill="#e03131" opacity="0.82"/><circle cx="100" cy="184" r="7" fill="#e03131" opacity="0.75"/><circle cx="110" cy="180" r="7" fill="#e03131" opacity="0.7"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">ฝีดาษลิง, หูดน้ำ, หิด</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">Mpox Clade Ib: ผื่น/ตุ่มหนองที่อวัยวะเพศ–ขาหนีบ ± ต่อมน้ำเหลืองโต (Inguinal LAP) โดยไม่จำเป็นต้องมีผื่นทั่วตัว — พบบ่อยในการติดเชื้อทางเพศสัมพันธ์</td>
+                    </tr>
+                    <!-- แขน -->
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#5588cc;display:inline-block;flex-shrink:0"></span>แขน</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(left/right-arm)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="44" cy="112" r="9" fill="#e03131" opacity="0.82"/><circle cx="48" cy="133" r="8" fill="#e03131" opacity="0.75"/><circle cx="42" cy="152" r="7" fill="#e03131" opacity="0.7"/><circle cx="152" cy="112" r="9" fill="#e03131" opacity="0.82"/><circle cx="156" cy="133" r="8" fill="#e03131" opacity="0.75"/><circle cx="150" cy="152" r="7" fill="#e03131" opacity="0.7"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">สุกใส, หิด, ผื่นแพ้ยา, หัด</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">งูสวัด: ผื่นตามแนวเส้นประสาทข้างเดียว (Dermatomal) ไม่ข้ามแนวกลางตัว · หิด: มักพบที่ข้อพับข้อศอก ง่ามนิ้ว · ผื่นแพ้ยา: กระจายสมมาตรสองข้าง</td>
+                    </tr>
+                    <!-- มือ/ฝ่ามือ -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#2a8050;display:inline-block;flex-shrink:0"></span>มือ / ฝ่ามือ</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(hand)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="38" cy="192" r="8" fill="#e03131" opacity="0.82"/><circle cx="48" cy="202" r="7" fill="#e03131" opacity="0.75"/><circle cx="42" cy="211" r="7" fill="#e03131" opacity="0.7"/><circle cx="152" cy="192" r="8" fill="#e03131" opacity="0.82"/><circle cx="162" cy="202" r="7" fill="#e03131" opacity="0.75"/><circle cx="156" cy="211" r="7" fill="#e03131" opacity="0.7"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">ฝีดาษลิง, มือเท้าปาก, หิด</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ฝ่ามือ + ฝ่าเท้า = Centrifugal pattern เฉพาะของ Mpox (ต่างจากสุกใสที่ฝ่ามือปกติ) · หิด: รอยขุดที่ง่ามนิ้ว/ข้อมือ · มือเท้าปาก: ตุ่มน้ำใสบนฝ่ามือ/นิ้ว</td>
+                    </tr>
+                    <!-- ต้นขา -->
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#882840;display:inline-block;flex-shrink:0"></span>ต้นขา</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(thigh)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="78" cy="206" r="9" fill="#e03131" opacity="0.82"/><circle cx="88" cy="222" r="8" fill="#e03131" opacity="0.75"/><circle cx="80" cy="240" r="7" fill="#e03131" opacity="0.7"/><circle cx="112" cy="206" r="9" fill="#e03131" opacity="0.82"/><circle cx="122" cy="222" r="8" fill="#e03131" opacity="0.75"/><circle cx="114" cy="240" r="7" fill="#e03131" opacity="0.7"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">สุกใส, ไข้เลือดออก, ผื่นแพ้ยา</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">สุกใส: ผื่นลามจากลำตัวลงต้นขา · งูสวัด: เส้นประสาท L1–L3 ด้านหน้าต้นขา · ไข้เลือดออก: petechiae มักเริ่มจากขาส่วนล่างขึ้นบน</td>
+                    </tr>
+                    <!-- แข้ง/น่อง -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#882840;display:inline-block;flex-shrink:0"></span>แข้ง / น่อง</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(leg)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="80" cy="268" r="8" fill="#e03131" opacity="0.82"/><circle cx="86" cy="289" r="8" fill="#e03131" opacity="0.75"/><circle cx="78" cy="308" r="7" fill="#e03131" opacity="0.7"/><circle cx="114" cy="268" r="8" fill="#e03131" opacity="0.82"/><circle cx="120" cy="289" r="8" fill="#e03131" opacity="0.75"/><circle cx="112" cy="308" r="7" fill="#e03131" opacity="0.7"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">ไข้เลือดออก (petechiae), สุกใส</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ไข้เลือดออก: petechiae/ecchymosis ที่น่อง — เห็นเป็น "White islands in red sea" เมื่อทำ Tourniquet test · งูสวัด: Dermatome L4–S2 · มือเท้าปาก: ตุ่มที่น่อง/หลังเท้า</td>
+                    </tr>
+                    <!-- เท้า/ฝ่าเท้า -->
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#2a8050;display:inline-block;flex-shrink:0"></span>เท้า / ฝ่าเท้า</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(foot)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="76" cy="338" r="8" fill="#e03131" opacity="0.82"/><circle cx="86" cy="347" r="7" fill="#e03131" opacity="0.75"/><circle cx="82" cy="342" r="6" fill="#e03131" opacity="0.65"/><circle cx="112" cy="338" r="8" fill="#e03131" opacity="0.82"/><circle cx="120" cy="347" r="7" fill="#e03131" opacity="0.75"/><circle cx="118" cy="342" r="6" fill="#e03131" opacity="0.65"/></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">ฝีดาษลิง, มือเท้าปาก</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ฝ่าเท้า + ฝ่ามือ = Centrifugal pattern เฉพาะของ Mpox · มือเท้าปาก: ตุ่มน้ำใสที่ฝ่าเท้า/ส้นเท้า · ฝ่าเท้าปกติ = ช่วยแยกสุกใสออกได้</td>
+                    </tr>
+                    <!-- ท้ายทอย (back) -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#9c59d1;display:inline-block;flex-shrink:0"></span>ท้ายทอย</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(back-head)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="92" cy="30" r="9" fill="#e03131" opacity="0.82"/><circle cx="107" cy="24" r="7" fill="#e03131" opacity="0.7"/><circle cx="100" cy="44" r="8" fill="#e03131" opacity="0.75"/><text x="100" y="356" text-anchor="middle" font-size="9" fill="#9c59d1" font-family="sans-serif">↩BACK</text></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">หัดเยอรมัน, งูสวัด</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">ต่อมน้ำเหลืองท้ายทอย–หลังหู (Suboccipital LAP) โตก่อนผื่น 1–5 วัน = hallmark หัดเยอรมัน · งูสวัดที่ศีรษะ: ระวัง Ramsay Hunt syndrome (ผื่นหูชั้นนอก + หน้าเบี้ยว)</td>
+                    </tr>
+                    <!-- หลังบน (back) -->
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#9c59d1;display:inline-block;flex-shrink:0"></span>หลังบน ซ้าย/ขวา</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(upper-back)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="74" cy="100" r="9" fill="#e03131" opacity="0.82"/><circle cx="88" cy="116" r="8" fill="#e03131" opacity="0.75"/><circle cx="78" cy="130" r="7" fill="#e03131" opacity="0.7"/><circle cx="108" cy="100" r="9" fill="#e03131" opacity="0.82"/><circle cx="122" cy="116" r="8" fill="#e03131" opacity="0.75"/><circle cx="114" cy="130" r="7" fill="#e03131" opacity="0.7"/><text x="100" y="356" text-anchor="middle" font-size="9" fill="#9c59d1" font-family="sans-serif">↩BACK</text></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">สุกใส, งูสวัด, ผื่นแพ้ยา</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">งูสวัด: ผื่นแนวเส้นประสาท T1–T6 ข้างเดียว ไม่ข้ามแนวกลางตัว · สุกใส: ผื่นหนาแน่นที่หลัง (Centripetal) · ผื่นแพ้ยา: กระจายสมมาตรสองข้าง</td>
+                    </tr>
+                    <!-- หลังล่าง/บั้นเอว (back) -->
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px;font-weight:600;text-align:center">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#c07030;display:inline-block;flex-shrink:0"></span>หลังล่าง / บั้นเอว</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(lower-back)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="92" cy="141" r="9" fill="#e03131" opacity="0.82"/><circle cx="108" cy="150" r="8" fill="#e03131" opacity="0.75"/><circle cx="100" cy="163" r="9" fill="#e03131" opacity="0.7"/><text x="100" y="356" text-anchor="middle" font-size="9" fill="#9c59d1" font-family="sans-serif">↩BACK</text></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px">หิด, สุกใส, ผื่นแพ้ยา</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted)">หิด: รอยขุดที่เอว/บั้นเอว คันรุนแรงกลางคืน — ลักษณะเด่นที่ต่างจากผื่นอื่น · งูสวัด: Dermatome T10–L1 ด้านข้างลำตัว · สุกใส: ผื่นลำตัวส่วนล่าง</td>
+                    </tr>
+                    <!-- สะโพก/ก้น (back) -->
+                    <tr>
+                      <td style="padding:9px 12px;font-weight:600;text-align:center;background:rgba(0,0,0,.015)">
+                        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:1px">
+                          <span style="display:inline-flex;align-items:center;gap:5px;white-space:nowrap"><span style="width:8px;height:8px;border-radius:50%;background:#e05050;display:inline-block;flex-shrink:0"></span>สะโพก / ก้น</span>
+                          <div style="font-size:11px;color:var(--text-muted);font-weight:400">(buttocks)</div>
+                          <svg width="44" height="80" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px auto 0"><use href="#body-sil"/><circle cx="78" cy="184" r="9" fill="#e03131" opacity="0.82"/><circle cx="88" cy="200" r="8" fill="#e03131" opacity="0.75"/><circle cx="80" cy="216" r="7" fill="#e03131" opacity="0.7"/><circle cx="112" cy="184" r="9" fill="#e03131" opacity="0.82"/><circle cx="122" cy="200" r="8" fill="#e03131" opacity="0.75"/><circle cx="114" cy="216" r="7" fill="#e03131" opacity="0.7"/><text x="100" y="356" text-anchor="middle" font-size="9" fill="#9c59d1" font-family="sans-serif">↩BACK</text></svg>
+                        </div>
+                      </td>
+                      <td style="padding:9px 12px;background:rgba(0,0,0,.015)">มือเท้าปาก, หิด</td>
+                      <td style="padding:9px 12px;font-size:11.5px;color:var(--text-muted);background:rgba(0,0,0,.015)">มือเท้าปาก: ผื่น/ตุ่มที่ก้นพบใน 40–67% ของเด็กเล็ก — ช่วย confirm HFMD · หิด: รอยขุดที่ก้น/ราวก้น · อาจสับสนกับสุกใส — ดูตำแหน่งฝ่ามือ/ฝ่าเท้าประกอบ</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Table 2: Pattern Combination → Disease -->
+            <div class="card">
+              <div class="card-header" style="background:linear-gradient(135deg,#f5f0ff,#fff0f5)">
+                <div class="card-title" style="display:flex;align-items:center;gap:8px">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9c59d1" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                  รูปแบบการกระจายผื่น → โรคที่สงสัย
+                </div>
+                <div class="card-subtitle">ใช้ร่วมกับ Body Map ในหน้า Assess เพื่อแยกโรค</div>
+              </div>
+              <div class="card-body" style="padding:0;overflow-x:auto">
+                <table style="width:100%;border-collapse:collapse;font-size:12.5px;min-width:420px">
+                  <thead>
+                    <tr style="background:rgba(156,89,209,.08)">
+                      <th style="padding:10px 12px;text-align:left;min-width:180px">รูปแบบตำแหน่งผื่น</th>
+                      <th style="padding:10px 12px;text-align:left">โรคที่สงสัย</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px">มือ + เท้า</td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#e05050;flex-shrink:0;display:inline-block"></span><strong>มือเท้าปาก (HFMD)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px">ใบหน้า + มือ + เท้า</td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#2a8050;flex-shrink:0;display:inline-block"></span><strong>ฝีดาษลิง (Mpox)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px">ใบหน้า + ขาหนีบ</td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#2a8050;flex-shrink:0;display:inline-block"></span><strong>ฝีดาษลิง (Mpox)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px">ลำตัวอย่างเดียว<br><span style="font-size:11px;color:var(--text-muted)">ไม่มีใบหน้า / มือ / เท้า</span></td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#d060a0;flex-shrink:0;display:inline-block"></span><strong>ส่าไข้ (Roseola)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px">ข้างเดียวของร่างกาย<br><span style="font-size:11px;color:var(--text-muted)">(ซ้ายหรือขวา)</span></td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#9c59d1;flex-shrink:0;display:inline-block"></span><strong>งูสวัด (Herpes Zoster)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px">มือ + เอว + ก้น</td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#c07030;flex-shrink:0;display:inline-block"></span><strong>หิด (Scabies)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px">ผื่น 1–2 บริเวณเท่านั้น</td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#508050;flex-shrink:0;display:inline-block"></span><strong>ผื่นแพ้สัมผัส (Contact Derm)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border);background:rgba(0,0,0,.015)">
+                      <td style="padding:9px 12px">ลำตัว + แข้ง<br><span style="font-size:11px;color:var(--text-muted)">ไม่มีใบหน้า</span></td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#882840;flex-shrink:0;display:inline-block"></span><strong>ไข้เลือดออก (Dengue)</strong></span></td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border)">
+                      <td style="padding:9px 12px">ใบหน้า + ลำตัว<br><span style="font-size:11px;color:var(--text-muted)">แพร่จากบนลงล่าง</span></td>
+                      <td style="padding:9px 12px"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#cc3030;flex-shrink:0;display:inline-block"></span><strong>หัด (Measles)</strong></span></td>
+                    </tr>
+                    <tr>
+                      <td style="padding:9px 12px;background:rgba(0,0,0,.015)">ใบหน้า + คอ + ลำตัว (บน)</td>
+                      <td style="padding:9px 12px;background:rgba(0,0,0,.015)"><span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#e08040;flex-shrink:0;display:inline-block"></span><strong>หัดเยอรมัน (Rubella)</strong></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div><!-- /ctab-bodymap-panel -->
+
+
         </div>
       </div>
     </div><!-- /criteria -->
@@ -804,6 +1081,24 @@
 
 <!-- Toast -->
 <div class="toast" id="toast"></div>
+
+<!-- SVG symbol defs for mini body mannequins -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="body-sil" viewBox="0 0 200 360">
+      <ellipse cx="100" cy="36" rx="27" ry="33" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <rect x="89" y="68" width="22" height="18" rx="4" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <path d="M62 84 Q52 86 34 92 L30 182 Q30 215 58 215 L68 215 L68 180 L132 180 L132 215 L142 215 Q170 215 170 182 L166 92 Q148 86 138 84 Z" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <path d="M34 92 L28 195 Q28 215 38 215 L58 215 L62 182 L62 84 Z" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <path d="M166 92 L172 195 Q172 215 162 215 L142 215 L138 182 L138 84 Z" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <rect x="66" y="175" width="68" height="12" rx="4" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <path d="M68 187 L66 342 Q66 346 78 346 L96 346 L98 187 Z" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <path d="M102 187 L104 342 Q104 346 116 346 L134 346 L132 187 Z" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <ellipse cx="82" cy="344" rx="18" ry="10" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+      <ellipse cx="118" cy="344" rx="18" ry="10" fill="#f5ede4" stroke="#c9a882" stroke-width="3"/>
+    </symbol>
+  </defs>
+</svg>
 
 <script src="./script.js"></script>
 <script src="./charts-enhanced.js"></script>
