@@ -11,7 +11,7 @@ const DEPT_GROUPS = [
   { group: 'หน่วยที่ 3',        items: ['OPD 6', 'OPD 7', 'Retina'] },
   { group: 'หน่วยที่ 4',        items: ['OPD 9', 'OPD 21', 'PCU', 'OPD เฉพาะทางนอกเวลา', 'NCDs'] },
   { group: 'หน่วยที่ 5',        items: ['OPD 22', 'OPD 23', 'OPD 26'] },
-  { group: 'หน่วยที่ 6',        items: ['OPD 101', 'รังสีรักษา, 'Ostomy'] },
+  { group: 'หน่วยที่ 6',        items: ['OPD 101', 'รังสีรักษา', 'Ostomy'] },
   { group: 'หน่วยที่ 7',        items: ['EID Complex'] },
   { group: 'หน่วยที่ 8',        items: ['OPD 27', 'OPD 28', 'OPD 29'] },
   { group: 'หน่วยผ่าตัดเล็ก',  items: ['OR Minor ชั้น 3', 'OR Minor ชั้น 10', 'OPD 2'] },
